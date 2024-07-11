@@ -13,7 +13,7 @@ function About() {
     };
 
     return (
-        <div class="home-content">
+        <div class="about-content">
         <h1>About me</h1>
         <p>My name is Jakob Kjeldsteen, and i am 24 years old. I've studied and completed an AP degree in Computer Science from UCN Aalborg, Denmark</p>
         <p>In my spare time i like to play video games with friends or sometimes alone. I mostly play online multiplayer games ranging from Minecraft to League of Legends

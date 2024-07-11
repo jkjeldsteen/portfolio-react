@@ -1,7 +1,7 @@
-.home-content {
+.about-content {
     height: 100vh;
     margin-left: 10%; /* Match the initial width of the sidenav */
-    overflow: hidden;
+    overflow: auto; /* Enable scrolling if content overflows */
     background-image: url('../../resources/images/clay-banks.jpg'); /* Updated path to image */
     background-size: cover;
     background-position: center;
@@ -14,14 +14,14 @@
     box-sizing: border-box; /* Include padding in width calculations */
 }
 
-.home-content h1 {
+.about-content h1 {
     font-size: 1.8em;
     margin-bottom: 20px;
     padding-left: 30px;
     box-sizing: border-box; /* Include padding in width calculations */
 }
 
-.home-content p {
+.about-content p {
     font-size: 1.4em;
     margin-bottom: 20px;
     padding-left: 30px;
@@ -29,7 +29,13 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .home-content {
+    .about-content {
         margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .about-content {
+        height: auto; /* Allow height to adjust for content */
     }
 }
