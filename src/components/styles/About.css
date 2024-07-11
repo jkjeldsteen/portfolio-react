@@ -2,7 +2,7 @@
     height: 100vh;
     margin-left: 10%; /* Match the initial width of the sidenav */
     overflow: auto; /* Enable scrolling if content overflows */
-    background-image: url('../../resources/images/clay-banks.jpg'); /* Updated path to image */
+    background-color: #1F1F1F;
     background-size: cover;
     background-position: center;
     padding: 20px; /* Padding inside the content area */
