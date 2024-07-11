@@ -1,0 +1,107 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark background color */
+    color: #ccc; /* Light text color */
+}
+
+.container {
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    padding: 20px;
+    gap: 20px; /* Add gap between cards */
+}
+
+.skills-category {
+    background-color: #2b2b2b; /* Darker background for each category */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(30% - 20px); /* Adjust width for 3 columns with gap */
+}
+
+.skills-category h2 {
+    color: #007bff; /* Blue color for headings */
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.skills-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-category ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    display: flex; /* Align items vertically */
+    align-items: center; /* Center items vertically */
+}
+
+
+.skills-category ul li .svg-inline--fa {
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: #007bff; /* Blue color for icons */
+}
+
+.skills-category ul li img {
+    width: 35px; /* Adjust image size as needed */
+    height: auto;
+    margin-right: 10px;
+    /* border-radius: 50%; Rounded corners for circular icons */
+}
+
+@media screen and (max-width: 1440px) {
+    .skills-category {
+        width: calc(30%); /* Adjust width for 2 columns with gap */
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        margin-left: 0;
+    }
+
+    .skills-category {
+        width: calc(50% - 20px); /* Adjust width for 2 columns with gap */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin-left: 0;
+    }
+
+    .skills-category {
+        width: calc(100% - 40px); /* Full width minus padding for single column */
+    }
+
+    .skills-category h2 {
+        font-size: 1.3em; /* Reduce font size for headings */
+    }
+
+    .skills-category ul li {
+        font-size: 1em; /* Reduce font size for list items */
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        margin-left: 0%;
+    }
+
+    .skills-category {
+        width: calc(100% - 40px); /* Full width minus padding for single column */
+    }
+
+    .skills-category h2 {
+        font-size: 1.2em; /* Further reduce font size for headings */
+    }
+
+    .skills-category ul li {
+        font-size: 0.9em; /* Further reduce font size for list items */
+    }
+}

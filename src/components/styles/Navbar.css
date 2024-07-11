@@ -1,0 +1,124 @@
+.sidenav {
+    background-color: #1F1F1F;
+    height: 100vh;
+    width: 10%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    transition: width 0.5s; /* Add transition for smoother animation */
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidenav ul li {
+    margin-bottom: 10px;
+}
+
+.sidenav ul li a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #c0c0c0;
+    display: block;
+}
+
+.sidenav ul li a:hover {
+    color: #ffffff;
+    transition: 0.5s ease;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20%; /* Adjust as needed */
+    padding-top: 20px;
+}
+
+.social-icons a {
+    color: #c0c0c0;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+}
+
+.toggle-btn {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 10px;
+    left: 10px;
+    background: #1F1F1F;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: transform 0.3s ease; /* Add transition for button animation */
+}
+
+.toggle-btn.open {
+    transform: rotate(90deg); /* Rotate button when sidebar is open */
+}
+
+@media screen and (max-width: 1024px) {
+    .toggle-btn {
+        display: block;
+    }
+
+    .sidenav {
+        width: 0;
+        overflow: hidden;
+        padding-top: 0;
+    }
+
+    .sidenav.open {
+        width: 20%; /* Adjust expanded width for mobile */
+    }
+
+    .toggle-btn.open {
+        transform: rotate(0deg); /* Reset rotation when sidebar is closed */
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .toggle-btn {
+        display: block;
+    }
+
+    .sidenav {
+        width: 0;
+        overflow: hidden;
+        padding-top: 0;
+    }
+
+    .sidenav.open {
+        width: 200px; /* Adjust expanded width for mobile */
+    }
+
+    .toggle-btn.open {
+        transform: rotate(0deg); /* Reset rotation when sidebar is closed */
+    }
+}

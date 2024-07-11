@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a4f4f76f.css",
+    "main.js": "/static/js/main.41cd3317.js",
+    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "static/media/resume.pdf": "/static/media/resume.e06aae38a290bc7cb58e.pdf",
+    "static/media/clay-banks.jpg": "/static/media/clay-banks.956eb4f1e494f9c335cb.jpg",
+    "static/media/Golang.png": "/static/media/Golang.0ed17869a182b05f19c0.png",
+    "static/media/csharp.png": "/static/media/csharp.23e58705dee64307796f.png",
+    "index.html": "/index.html",
+    "main.a4f4f76f.css.map": "/static/css/main.a4f4f76f.css.map",
+    "main.41cd3317.js.map": "/static/js/main.41cd3317.js.map",
+    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4f4f76f.css",
+    "static/js/main.41cd3317.js"
+  ]
+}

@@ -1,0 +1,35 @@
+.home-content {
+    height: 100vh;
+    margin-left: 10%; /* Match the initial width of the sidenav */
+    overflow: hidden;
+    background-image: url('../../resources/images/clay-banks.jpg'); /* Updated path to image */
+    background-size: cover;
+    background-position: center;
+    padding: 20px; /* Padding inside the content area */
+    color: #E0E0E0; /* Light text color for content */
+    display: flex; /* Use flexbox for content alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-end; /* Align content at the bottom */
+    align-items: flex-start; /* Align content to the start */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.home-content h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.home-content p {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+@media screen and (max-width: 1024px) {
+    .home-content {
+        margin-left: 0;
+    }
+}
