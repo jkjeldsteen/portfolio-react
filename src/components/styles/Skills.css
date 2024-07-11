@@ -90,11 +90,11 @@ body {
 
 @media screen and (max-width: 425px) {
     .container {
-        margin-left: 0%;
+        margin-left: 25%;
     }
 
     .skills-category {
-        width: calc(100% - 40px); /* Full width minus padding for single column */
+        width: calc(50% - 20px); /* Full width minus padding for single column */
     }
 
     .skills-category h2 {
