@@ -1,3 +1,9 @@
+/* Ensure links do not change the appearance of the cards */
+a.project-card {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Main Content Area */
 .main-content {
     margin-left: 10%;
@@ -70,16 +76,31 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .project-card h2 {
+        visibility: visible;
+        bottom: calc(75%); /* Move h2 to the top on hover */
+        font-family: 'Lato', sans-serif;
+        font-size: 1.1em;
+    }
+
+    .project-card p {
+        position: relative;
+        opacity: 1;
+        left: 20px;
+        top: calc(10%);
+        width: calc(100% - 40px); /* Adjust width to fit within card padding */
+    }
+
+    .project-card:hover p {
+        opacity: 1; /* Make text visible on hover */
+        transition: opacity 0.7s ease; /* Smooth transition for text appearance */
+        top: calc(10%);
+    }
+}
+
 @media screen and (max-width: 425px) {
     .project-card {
         width: calc(100%); /* Full width minus padding */
-    }
-
-    .project-card h2 {
-        visibility: visible; /* Ensure h2 is visible on smaller screens */
-    }
-
-    .project-card:hover h2 {
-        visibility: hidden; /* Hide h2 on hover for smaller screens */
-    }
+    }    
 }
