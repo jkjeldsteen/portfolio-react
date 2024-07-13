@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'; // Import NavLink instead of Link
 import './styles/Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faItchIo } from '@fortawesome/free-brands-svg-icons';
@@ -19,13 +19,14 @@ function Navbar() {
             {/* Sidebar navigation */}
             <div className={`sidenav ${isOpen ? 'open' : ''}`}>
                 <ul>
-                    <li><Link to="/" onClick={toggleNav}>Home</Link></li>
-                    <li><Link to="/work" onClick={toggleNav}>Work</Link></li>
-                    <li><Link to="/about" onClick={toggleNav}>About</Link></li>
-                    <li><Link to="/skills" onClick={toggleNav}>Skills</Link></li>
+                    {/* Use NavLink with activeClassName for active styling */}
+                    <li><NavLink exact to="/" onClick={toggleNav} activeClassName="active">Home</NavLink></li>
+                    <li><NavLink to="/work" onClick={toggleNav} activeClassName="active">Work</NavLink></li>
+                    <li><NavLink to="/about" onClick={toggleNav} activeClassName="active">About</NavLink></li>
+                    <li><NavLink to="/skills" onClick={toggleNav} activeClassName="active">Skills</NavLink></li>
                 </ul>
                 <div className="social-icons">
-                <a href="https://github.com/jkjeldsteen" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/jkjeldsteen" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
                     <a href="https://www.linkedin.com/in/jkjeldsteen/" target="_blank" rel="noopener noreferrer">

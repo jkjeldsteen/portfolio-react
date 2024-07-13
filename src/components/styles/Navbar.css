@@ -1,5 +1,5 @@
 .sidenav {
-    background-color: #1F1F1F;
+    background-color: transparent !important;
     height: 100vh;
     width: 10%;
     position: fixed;
@@ -35,13 +35,19 @@
     padding: 10px;
     text-decoration: none;
     font-size: 1.3em;
-    color: #c0c0c0;
+    color: #ffffff;
     display: block;
+    transition: color 0.3s, border-bottom-color 0.3s; /* Transition for color change */
 }
 
-.sidenav ul li a:hover {
-    color: #ffffff;
-    transition: 0.5s ease;
+.sidenav ul li a:hover
+ {
+    color: #31ebad;
+}
+
+.sidenav ul li a.active {
+    color: #31ebad; 
+    border-bottom: 2px solid #31ebad;
 }
 
 .social-icons {
@@ -103,13 +109,17 @@
     }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 425px) {
+    
+
     .toggle-btn {
         display: block;
     }
 
     .sidenav {
+        background-color: #125740 !important;
         width: 0;
+        border-radius: 0 10px 10px 0; /* Rounded corners on the right side */
         overflow: hidden;
         padding-top: 0;
     }
