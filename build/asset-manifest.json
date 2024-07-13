@@ -1,19 +1,34 @@
 {
   "files": {
-    "main.css": "/static/css/main.a4f4f76f.css",
-    "main.js": "/static/js/main.d4c1d24a.js",
+    "main.css": "/static/css/main.605f2ce1.css",
+    "main.js": "/static/js/main.3693de4b.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/resume.pdf": "/static/media/resume.e06aae38a290bc7cb58e.pdf",
     "static/media/clay-banks.jpg": "/static/media/clay-banks.956eb4f1e494f9c335cb.jpg",
-    "static/media/Golang.png": "/static/media/Golang.0ed17869a182b05f19c0.png",
-    "static/media/csharp.png": "/static/media/csharp.23e58705dee64307796f.png",
+    "static/media/php2-svgrepo-com.svg": "/static/media/php2-svgrepo-com.7c8744f2ab546f61d58d07dfd65ae401.svg",
+    "static/media/postgresql-svgrepo-com.svg": "/static/media/postgresql-svgrepo-com.9aed68683d15cfc3c3fd8ddf1d89ff4e.svg",
+    "static/media/golang-svgrepo-com.svg": "/static/media/golang-svgrepo-com.c6b5b0a2490db0c32b570cf41ead9bac.svg",
+    "static/media/react-svgrepo-com.svg": "/static/media/react-svgrepo-com.f57b349b4d9df56c9b48c916a8d5adfb.svg",
+    "static/media/stripe-svgrepo-com.svg": "/static/media/stripe-svgrepo-com.149952a911500ef4e021c7877b63a126.svg",
+    "static/media/typescript-icon-svgrepo-com.svg": "/static/media/typescript-icon-svgrepo-com.5a8731afb70af69ca7846c3a07080df4.svg",
+    "static/media/scrum-svgrepo-com.svg": "/static/media/scrum-svgrepo-com.56c0d24657b16f19303c37bd51e73a5b.svg",
+    "static/media/nodejs-svgrepo-com.svg": "/static/media/nodejs-svgrepo-com.51fb0cf6ccda653f867a587bb90cc9c6.svg",
+    "static/media/java-svgrepo-com.svg": "/static/media/java-svgrepo-com.3d1f1777f72c1a4ca3003a5378491322.svg",
+    "static/media/javascript-svgrepo-com.svg": "/static/media/javascript-svgrepo-com.0866c81b3b841c647e23b8a5d991c312.svg",
+    "static/media/csharp-svgrepo-com.svg": "/static/media/csharp-svgrepo-com.040a443e3be3e2ab322fb029ff9dc32a.svg",
+    "static/media/git-svgrepo-com.svg": "/static/media/git-svgrepo-com.8ee81345da1c18b6cdb4bbe93b464810.svg",
+    "static/media/sql-svgrepo-com.svg": "/static/media/sql-svgrepo-com.9455f2f2bd26c88b5bb39d584a085d3d.svg",
+    "static/media/mongodb-logo-svgrepo-com.svg": "/static/media/mongodb-logo-svgrepo-com.bfa6cdd80f4a99232cadb39ebbb976d2.svg",
     "index.html": "/index.html",
-    "main.a4f4f76f.css.map": "/static/css/main.a4f4f76f.css.map",
-    "main.d4c1d24a.js.map": "/static/js/main.d4c1d24a.js.map",
+    "static/media/css-3-svgrepo-com.svg": "/static/media/css-3-svgrepo-com.315b8fdb9dbf75ae965b80bf368895cd.svg",
+    "static/media/html-5-svgrepo-com.svg": "/static/media/html-5-svgrepo-com.0107c93943a8f415b5db64ebb0a9d12d.svg",
+    "static/media/vue-svgrepo-com.svg": "/static/media/vue-svgrepo-com.2b520303788d88b4e0c3776cd07cd61f.svg",
+    "main.605f2ce1.css.map": "/static/css/main.605f2ce1.css.map",
+    "main.3693de4b.js.map": "/static/js/main.3693de4b.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4f4f76f.css",
-    "static/js/main.d4c1d24a.js"
+    "static/css/main.605f2ce1.css",
+    "static/js/main.3693de4b.js"
   ]
 }

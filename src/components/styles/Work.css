@@ -1,3 +1,15 @@
+.projects-wrapper {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #2c2c2c, #000000);
+    color: #ccc; /* Light text color */
+    min-height: 100vh; /* Ensure the wrapper stretches to at least the viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
 /* Ensure links do not change the appearance of the cards */
 a.project-card {
     text-decoration: none;
@@ -11,7 +23,6 @@ a.project-card {
     flex-wrap: wrap; /* Allow cards to wrap to the next line */
     justify-content: flex-start; /* Start from the beginning */
     align-items: flex-start; /* Align items to the start */
-    background-color: #161616;
 }
 
 .projects-container {
@@ -21,6 +32,7 @@ a.project-card {
 }
 
 .project-card {
+    display: flex;
     border-bottom: 1px solid #c0c0c0;
     color: #E0E0E0;
     padding: 20px;
@@ -30,7 +42,6 @@ a.project-card {
     height: auto; /* Adjust height dynamically based on content */
     min-height: 200px; /* Minimum height to prevent cards from collapsing too much */
     width: calc(50% - 40px); /* Adjust width to fit two cards per row */
-    margin: 20px; /* Add margin between cards */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
@@ -50,8 +61,6 @@ a.project-card {
 
 .project-card p {
     opacity: 0; /* Invisible initially */
-    left: 20px;
-    width: calc(100% - 40px); /* Adjust width to fit within card padding */
 }
 
 .project-card:hover h2 {
@@ -67,16 +76,16 @@ a.project-card {
 }
 
 @media screen and (max-width: 1024px) {
-    .main-content {
-        margin-left: 0;
-    }
-
     .project-card {
         width: calc(100% - 40px); /* Full width minus padding */
     }
 }
 
 @media screen and (max-width: 768px) {
+    .main-content {
+        margin-left: 20%;
+    }
+
     .project-card h2 {
         visibility: visible;
         bottom: calc(75%); /* Move h2 to the top on hover */
@@ -87,9 +96,7 @@ a.project-card {
     .project-card p {
         position: relative;
         opacity: 1;
-        left: 20px;
         top: calc(10%);
-        width: calc(100% - 40px); /* Adjust width to fit within card padding */
     }
 
     .project-card:hover p {
@@ -100,6 +107,10 @@ a.project-card {
 }
 
 @media screen and (max-width: 425px) {
+    .main-content {
+        margin-left: 0;
+    }
+
     .project-card {
         width: calc(100%); /* Full width minus padding */
     }    

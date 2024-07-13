@@ -1,15 +1,27 @@
+.about-wrapper {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: radial-gradient(circle, #2c2c2c, #000000);
+    color: #ccc; /* Light text color */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure the wrapper takes full viewport height */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
 .about-content {
-    height: 100vh;
-    margin-left: 10%; /* Match the initial width of the sidenav */
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px; /* Limit maximum width */
     overflow: auto; /* Enable scrolling if content overflows */
-    background-color: #1F1F1F;
     background-size: cover;
     background-position: center;
     padding: 20px; /* Padding inside the content area */
     color: #E0E0E0; /* Light text color for content */
     display: flex; /* Use flexbox for content alignment */
     flex-direction: column; /* Stack items vertically */
-    justify-content: flex-end; /* Align content at the bottom */
+    justify-content: center; /* Center content vertically */
     align-items: flex-start; /* Align content to the start */
     box-sizing: border-box; /* Include padding in width calculations */
 }
@@ -30,12 +42,19 @@
 
 @media screen and (max-width: 1024px) {
     .about-content {
-        margin-left: 0;
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        width: 75%;
     }
 }
 
 @media screen and (max-width: 425px) {
     .about-content {
         height: auto; /* Allow height to adjust for content */
+        width: 100%;
     }
 }

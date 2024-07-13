@@ -3,6 +3,7 @@ import './styles/Work.css';
 
 function Work() {
     return (
+        <div className='projects-wrapper'>
         <div className="main-content">
             <div className="projects-container">
                 <div className="project-card">
@@ -40,6 +41,7 @@ function Work() {
                     <p>In the second semester of my computer science education, I collaborated with my exam group to develop a demo version of a system for a local Kop & Kande store. The system could manage inventory and serve as a gift solution for Kop & Kande's customers. Backend developed in Java with a relational SQL database, front-end developed in WindowBuilder in Eclipse.</p>
                 </a>
             </div>
+        </div>
         </div>
     );
 }
