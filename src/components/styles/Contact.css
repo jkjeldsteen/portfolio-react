@@ -1,0 +1,96 @@
+/* Contact form wrapper */
+.contact-wrapper {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background: radial-gradient(circle, #2F3E46, #0A0A0A);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    padding: 20px;
+}
+
+/* Contact form styling */
+.contact-area {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.contact-area h1 {
+    color: #aaaaaa;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid #31ebad; /* Add border properties */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    padding: 5px 65px; /* Optional: Add padding to create space around the text */
+    display: inline-block; /* Ensure the border wraps tightly around the text */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Input and textarea styling */
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #31ebad;
+    border-radius: 10px;
+    background: #2c2c2c;
+    color: #ffffff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Input and textarea focus effect */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #31ebad;
+    box-shadow: 0 0 5px rgba(49, 235, 173, 0.5);
+}
+
+/* Button styling */
+button {
+    padding: 15px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 10px;
+    background: #28be8c;
+    color: #000000;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+button:hover {
+    background: #29c89b;
+    color: #ffffff;
+}
+
+/* Placeholder text color */
+::placeholder {
+    color: #aaaaaa;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-area{
+        width: 65%
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .contact-area{
+        width: 100%
+    }
+}
