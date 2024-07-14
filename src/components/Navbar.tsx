@@ -25,29 +25,29 @@ function Navbar() {
       {/* Sidebar navigation */}
       <div className={`sidenav ${isOpen ? "open" : ""}`}>
         <ul>
-          {/* Use NavLink with activeClassName for active styling */}
+          {/* Use NavLink with className for active styling */}
           <li>
-            <NavLink exact to="/" onClick={toggleNav} activeClassName="active">
+            <NavLink to="/" onClick={toggleNav} className={({ isActive }) => (isActive ? "active" : undefined)}>
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/work" onClick={toggleNav} activeClassName="active">
+            <NavLink to="/work" onClick={toggleNav} className={({ isActive }) => (isActive ? "active" : undefined)}>
               Work
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" onClick={toggleNav} activeClassName="active">
+            <NavLink to="/about" onClick={toggleNav} className={({ isActive }) => (isActive ? "active" : undefined)}>
               About
             </NavLink>
           </li>
           <li>
-            <NavLink to="/skills" onClick={toggleNav} activeClassName="active">
+            <NavLink to="/skills" onClick={toggleNav} className={({ isActive }) => (isActive ? "active" : undefined)}>
               Skills
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" onClick={toggleNav} activeClassName="active">
+            <NavLink to="/contact" onClick={toggleNav} className={({ isActive }) => (isActive ? "active" : undefined)}>
               Contact
             </NavLink>
           </li>
