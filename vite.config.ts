@@ -6,5 +6,6 @@ export default defineConfig({
   server: {
     port: 3000,
     open: false, // Automatically open the browser on server start
+    host: true
   },
 });
