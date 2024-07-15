@@ -5,6 +5,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    open: true, // Automatically open the browser on server start
+    open: false, // Automatically open the browser on server start
   },
 });
