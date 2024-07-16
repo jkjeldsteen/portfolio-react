@@ -2,23 +2,19 @@
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
-    background: radial-gradient(circle, #2F3E46, #0A0A0A);
+    background: radial-gradient(circle, #2F3E46, #0A0A0A); /* Radial gradient background */
     color: #ccc; /* Light text color */
     min-height: 100vh; /* Ensure the wrapper stretches to at least the viewport height */
     display: flex;
     justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-}
-
-/* Ensure links do not change the appearance of the cards */
-a.project-card {
-    text-decoration: none;
-    color: inherit;
+    align-items: flex-start; /* Align items to the top with some padding */
+    padding-top: 50px; /* Add top padding */
 }
 
 /* Main Content Area */
 .main-content {
     margin-left: 10%;
+    padding-right: 10%; /* Add right padding */
     display: flex;
     flex-wrap: wrap; /* Allow cards to wrap to the next line */
     justify-content: flex-start; /* Start from the beginning */
@@ -29,89 +25,46 @@ a.project-card {
     width: 100%; /* Full width of the main content area */
     display: flex;
     flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: flex-start; /* Align items to the left */
+    padding: 20px; /* Add padding to the container */
 }
 
-.project-card {
-    display: flex;
-    border-bottom: 1px solid #c0c0c0;
-    color: #E0E0E0;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-    height: auto; /* Adjust height dynamically based on content */
-    min-height: 200px; /* Minimum height to prevent cards from collapsing too much */
-    width: calc(50% - 40px); /* Adjust width to fit two cards per row */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+.card {
+    flex: 0 0 calc(33.333% - 20px); /* 3 cards per row with some margin */
+    margin: 10px; /* Space between cards */
+    color: white; /* Text color */
+    padding: 20px; /* Padding inside the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
 }
 
-.project-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-
-}
-
-.project-card h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    position: absolute;
-    bottom: 10px; /* Position h2 at the bottom */
-    left: 20px;
-    transition: bottom 0.3s ease; /* Smooth transition for positioning */
-}
-
-.project-card p {
-    opacity: 0; /* Invisible initially */
-}
-
-.project-card:hover h2 {
-    bottom: calc(75%); /* Move h2 to the top on hover */
-    font-family: 'Lato', sans-serif;
-}
-
-.project-card:hover p {
-    opacity: 1; /* Make text visible on hover */
-    transition: opacity 0.7s ease; /* Smooth transition for text appearance */
-    top: calc(100%); /* Position p text in the middle */
-    font-family: 'Lato', sans-serif;
-}
-
+/* Adjust for smaller screens */
 @media screen and (max-width: 1024px) {
-    .project-card {
-        width: calc(100% - 40px); /* Full width minus padding */
+    .main-content {
+        margin-left: 15%;
+    }
+
+    .card {
+        flex: 0 0 calc(50% - 20px); /* 2 cards per row */
     }
 }
 
 @media screen and (max-width: 768px) {
     .main-content {
         margin-left: 20%;
+        padding-right: 5%; /* Adjust right padding */
     }
-
-    .project-card h2 {
-        visibility: visible;
-        bottom: calc(75%); /* Move h2 to the top on hover */
-        font-family: 'Lato', sans-serif;
-        font-size: 1.1em;
-    }
-
-    .project-card p {
-        position: relative;
-        opacity: 1;
-        top: calc(10%);
-    }
-
-    .project-card:hover p {
-        opacity: 1; /* Make text visible on hover */
-        transition: opacity 0.7s ease; /* Smooth transition for text appearance */
-        top: calc(10%);
+    .card {
+        flex: 0 0 calc(50% - 20px); /* 2 cards per row */
     }
 }
 
 @media screen and (max-width: 425px) {
     .main-content {
         margin-left: 0;
+        padding-right: 0; /* Remove right padding */
     }
-
-    .project-card {
-        width: calc(100%); /* Full width minus padding */
-    }    
+    .card {
+        flex: 0 0 calc(100% - 20px); /* 1 card per row */
+    }
 }
