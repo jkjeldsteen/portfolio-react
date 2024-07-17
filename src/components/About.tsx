@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/About.css";
+import "../components/styles/About.css";
 import resumePdf from "../resources/resume.pdf";
 
 function About() {

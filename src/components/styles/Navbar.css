@@ -117,15 +117,14 @@
     }
 
     .sidenav {
-        background-color: #125740 !important;
+        background: radial-gradient(circle, #2F3E46, #0A0A0A);
         width: 0;
-        border-radius: 0 10px 10px 0; /* Rounded corners on the right side */
         overflow: hidden;
         padding-top: 0;
     }
 
     .sidenav.open {
-        width: 200px; /* Adjust expanded width for mobile */
+        width: 100%; /* Adjust expanded width for mobile */
     }
 
     .toggle-btn.open {

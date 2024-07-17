@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom"; // Import NavLink instead of Link
-import "./styles/Navbar.css";
+import "../components/styles/Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -27,27 +27,47 @@ function Navbar() {
         <ul>
           {/* Use NavLink with className for active styling */}
           <li>
-            <NavLink to="/" onClick={toggleNav} className={({ isActive }) => (isActive ? "active" : undefined)}>
+            <NavLink
+              to="/"
+              onClick={toggleNav}
+              className={({ isActive }) => (isActive ? "active" : undefined)}
+            >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/work" onClick={toggleNav} className={({ isActive }) => (isActive ? "active" : undefined)}>
+            <NavLink
+              to="/work"
+              onClick={toggleNav}
+              className={({ isActive }) => (isActive ? "active" : undefined)}
+            >
               Work
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" onClick={toggleNav} className={({ isActive }) => (isActive ? "active" : undefined)}>
+            <NavLink
+              to="/about"
+              onClick={toggleNav}
+              className={({ isActive }) => (isActive ? "active" : undefined)}
+            >
               About
             </NavLink>
           </li>
           <li>
-            <NavLink to="/skills" onClick={toggleNav} className={({ isActive }) => (isActive ? "active" : undefined)}>
+            <NavLink
+              to="/skills"
+              onClick={toggleNav}
+              className={({ isActive }) => (isActive ? "active" : undefined)}
+            >
               Skills
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" onClick={toggleNav} className={({ isActive }) => (isActive ? "active" : undefined)}>
+            <NavLink
+              to="/contact"
+              onClick={toggleNav}
+              className={({ isActive }) => (isActive ? "active" : undefined)}
+            >
               Contact
             </NavLink>
           </li>
