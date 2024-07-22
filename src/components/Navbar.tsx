@@ -19,7 +19,7 @@ function Navbar() {
     <div>
       {/* Toggle button for small screens */}
       <div className="toggle-btn" onClick={toggleNav}>
-        ☰
+        {isOpen ? "✕" : "☰"}
       </div>
 
       {/* Sidebar navigation */}
@@ -95,9 +95,6 @@ function Navbar() {
             <FontAwesomeIcon icon={faItchIo} />
           </a>
         </div>
-      </div>
-      <div className="toggle-btn" onClick={toggleNav}>
-        ☰
       </div>
     </div>
   );

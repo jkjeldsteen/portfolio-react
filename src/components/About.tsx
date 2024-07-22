@@ -15,21 +15,22 @@ function About() {
   return (
     <div className="about-wrapper">
       <div className="about-content">
-        <h1>About me</h1>
+        <h1>About Me</h1>
+        <p>👋</p>
         <p>
-          My name is Jakob Kjeldsteen, and i am 24 years old. I've studied and
-          completed an AP degree in Computer Science from UCN Aalborg, Denmark
+          Hi there! I'm Jakob Kjeldsteen, a 24-year-old tech enthusiast with an
+          AP degree in Computer Science from UCN Aalborg, Denmark. 🎓
         </p>
         <p>
-          In my spare time i like to play video games with friends or sometimes
-          alone. I mostly play online multiplayer games ranging from Minecraft
-          to League of Legends to Counter-Strike and much more
+          When I'm not coding, you'll find me diving into video games, either
+          solo or with friends. Whether it's Minecraft, League of Legends,
+          Counter-Strike, or countless others, I'm always up for a challenge! 🎮
         </p>
         <p>
-          I also take interest in video game development and sometimes try by
-          myself to develop smaller "indie" games, i've done recreations of
-          popular games like "Asteroids" "Doodle Jump" and "Geometry Dash". You
-          can try some of my games in your browser here:{" "}
+          I'm also passionate about game development. I've dabbled in creating
+          my own "indie" games, recreating classics like "Asteroids," "Doodle
+          Jump," and "Geometry Dash." Curious? You can check out some of my
+          creations right in your browser here:{" "}
           <a
             href="https://jkjeldsteen.itch.io"
             target="_blank"
@@ -38,18 +39,20 @@ function About() {
           >
             Itch.io
           </a>
+          .
         </p>
         <p>
-          As part of my heavy interest for video games i also take a liking to
-          esports and follow games like League of Legends, Counter-Strike and
-          Rocket League on the big stages. I also volunteered as a coach for a
-          childrens Counter-Strike team for a couple years
+          My love for gaming extends to the esports arena. I avidly follow major
+          tournaments in League of Legends, Counter-Strike, and Rocket League.
+          Fun fact: I even volunteered as a coach for a children's
+          Counter-Strike team for a couple of years! 🏆
         </p>
         <p>
-          If you wanna know more you should take a look at my{" "}
+          Want to dive deeper into my journey? Take a peek at my{" "}
           <a href="#!" onClick={handleDownload} style={{ color: "#31ebad" }}>
             resumé
           </a>
+          . 📄
         </p>
       </div>
     </div>

@@ -18,7 +18,9 @@
 .skills-container h1 {
     color: #cecece;
     margin-bottom: 20px;
+    font-size: 22px;
     border: 2px solid #cecece; /* Add border properties */
+    border-radius: 8px;
     padding: 5px 65px; /* Optional: Add padding to create space around the text */
     display: inline-block; /* Ensure the border wraps tightly around the text */
 }
