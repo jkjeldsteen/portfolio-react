@@ -138,7 +138,7 @@ function Work() {
               <CardHeader>
                 <CardTitle className="text-xl font-bold">
                   POC Consent Management Platform for JP/Politiken - Want to
-                  learn more? Click me
+                  learn more? Click me!
                 </CardTitle>
                 <CardDescription className="text-sm mt-2">
                   5th and final semester project Computer Science AP
