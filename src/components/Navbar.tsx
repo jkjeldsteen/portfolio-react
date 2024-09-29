@@ -46,6 +46,15 @@ function Navbar() {
           </li>
           <li>
             <NavLink
+              to="/devlogs"
+              onClick={toggleNav}
+              className={({ isActive }) => (isActive ? "active" : undefined)}
+            >
+              Devlogs
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="/about"
               onClick={toggleNav}
               className={({ isActive }) => (isActive ? "active" : undefined)}

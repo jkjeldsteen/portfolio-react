@@ -1,8 +1,8 @@
 .about-wrapper {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Georama', sans-serif;
     margin: 0;
     padding: 20px;
-    background: radial-gradient(circle, #2F3E46, #0A0A0A);
+    background-color: #121212;
     color: #ccc; /* Light text color */
     display: flex;
     justify-content: center; /* Center horizontally */

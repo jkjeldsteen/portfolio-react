@@ -1,6 +1,6 @@
 .projects-wrapper {
-    background: radial-gradient(circle, #2F3E46, #0A0A0A); /* Radial gradient background */
-    font-family: 'Lato', sans-serif;
+    background-color: #121212;
+    font-family: 'Georama', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;

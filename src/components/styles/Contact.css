@@ -1,8 +1,8 @@
 /* Contact form wrapper */
 .contact-wrapper {
     margin: 0;
-    font-family: 'Lato', sans-serif;
-    background: radial-gradient(circle, #2F3E46, #0A0A0A);
+    font-family: 'Georama', sans-serif;
+    background-color: #121212;
     color: #ffffff;
     display: flex;
     justify-content: center;

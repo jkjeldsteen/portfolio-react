@@ -75,11 +75,11 @@ function Work() {
               </CardContent>
               <CardFooter className="flex flex-wrap items-center space-x-1 md:space-x-2 mb-2 md:mb-0 mt-auto">
                 <div className="flex items-center space-x-1">
-                  <Badge className="text-white whitespace-nowrap">Go</Badge>
+                  <Badge className="text-white whitespace-nowrap">GoLang</Badge>
                   <Badge className="text-white whitespace-nowrap">Stripe</Badge>
                 </div>
                 <div>
-                  <span>Through July 2024</span>
+                  <span>July 1st, 2024 - July 31st, 2024</span>
                 </div>
               </CardFooter>
             </Card>

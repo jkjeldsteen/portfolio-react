@@ -1,10 +1,10 @@
 .skills-wrapper {
-    background: radial-gradient(circle, #2F3E46, #0A0A0A);
+    background-color: #121212;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Georama', sans-serif;
     min-height: 100vh;
     box-sizing: border-box; /* Include padding in height calculations */
     overflow-y: hidden;

@@ -84,7 +84,7 @@ function Skills() {
             </li>
             <li>
               <img src={golangIcon} alt="Go" className="icon" />
-              <span>Go</span>
+              <span>GoLang</span>
             </li>
             <li>
               <img src={javaIcon} alt="Java" className="icon" />
