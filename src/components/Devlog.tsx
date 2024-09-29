@@ -1,5 +1,9 @@
 import React from "react";
 import "../components/styles/Devlog.css";
+//Import enemy images
+import meleeCavemanImg from "../resources/images/MeleeCaveman.png";
+import rangedCavemanImg from "../resources/images/RangedCaveman.png";
+import toddlerCavemanImg from "../resources/images/ToddlerCaveman.png";
 
 function Devlog() {
   return (
@@ -51,24 +55,39 @@ function Devlog() {
             <li>
               <strong>Melee Caveman:</strong> A brawny foe who charges at the
               player with a club, dealing heavy melee damage if he gets close.
+              <img
+                src={meleeCavemanImg}
+                alt="Melee Caveman"
+                className="enemy-image"
+              />
             </li>
             <li>
               <strong>Ranged Caveman:</strong> A tactical enemy who keeps his
               distance and throws stones at the player, forcing them to manage
               both long-range and close-range threats.
+              <img
+                src={rangedCavemanImg}
+                alt="Ranged Caveman"
+                className="enemy-image"
+              />
             </li>
             <li>
-              <strong>Toddler Caveman:</strong> A small, fast-moving enemy that
-              charges at the player and attempts to bite. They add a humorous
-              yet dangerous twist to the early combat dynamics.
+              <strong>Toddler Caveman:</strong> A small, slow enemy that waddles
+              towards the player and attempts to bite. They're not really
+              dangerous, but they will add life to the fight.
+              <img
+                src={toddlerCavemanImg}
+                alt="Toddler Caveman"
+                className="enemy-image"
+              />
             </li>
           </ul>
 
           <h3 className="devlog-section-title">What’s Next?</h3>
           <ul className="devlog-list">
-            <li>Finishing the Ice Age Level</li>
+            <li>Somewhat finishing the Ice Age Level</li>
             <li>Starting Persistent Upgrades (base health, attack speed)</li>
-            <li>Coin System</li>
+            <li>Coin System - So you can start buying upgrades</li>
           </ul>
 
           <p className="devlog-footer">

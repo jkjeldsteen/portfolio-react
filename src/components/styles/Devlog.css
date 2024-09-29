@@ -75,3 +75,10 @@ body {
   margin-top: 1rem;
   text-align: right;
 }
+
+.enemy-image {
+    display: block;
+    margin: 10px auto; /* Center the images */
+    max-width: 80%; /* Limit the width to maintain responsive design */
+    height: auto; /* Maintain aspect ratio */
+  }
