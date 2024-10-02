@@ -15,11 +15,11 @@ function Devlog() {
         <div className="devlog-entry">
           <h2 className="devlog-subtitle">Devlog #0 - Epoch Raiders</h2>
           <p className="devlog-text">
-            Welcome to the very first devlog for Epoch Raiders! I’m excited to
-            share the progress so far on the fundamentals of the game mechanics
-            and the development of Level 1: The Ice Age. While there's a lot
-            more to be done, the journey has begun, and it’s shaping up quite
-            nicely.
+            September 29th 2024: Welcome to the very first devlog for Epoch
+            Raiders! I’m excited to share the progress so far on the
+            fundamentals of the game mechanics and the development of Level 1:
+            The Ice Age. While there's a lot more to be done, the journey has
+            begun, and it’s shaping up quite nicely.
           </p>
 
           <h3 className="devlog-section-title">General Progress:</h3>
