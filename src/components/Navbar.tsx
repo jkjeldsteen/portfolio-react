@@ -50,7 +50,7 @@ function Navbar() {
               onClick={toggleNav}
               className={({ isActive }) => (isActive ? "active" : undefined)}
             >
-              Devlogs
+              Epoch Raiders
             </NavLink>
           </li>
           <li>

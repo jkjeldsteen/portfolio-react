@@ -6,7 +6,7 @@ function Home() {
     <div className="home-wrapper">
       <div className="home-content">
         <h1>Jakob Kjeldsteen</h1>
-        <p>Aspiring software developer</p>
+        <p>Junior software developer</p>
       </div>
     </div>
   );

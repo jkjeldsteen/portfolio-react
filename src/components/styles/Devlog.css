@@ -17,6 +17,45 @@ body {
   border-radius: 8px;
 }
 
+/* Style the devlog list title */
+.devlog-subtitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e6e6e6;
+  margin-bottom: 1.5rem;
+}
+
+/* Style the devlog list */
+.devlog-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Space between list items */
+  width: 100%; /* Ensures list takes full available width */
+  text-align: left; /* Center the text inside each item */
+}
+
+/* Style each devlog link */
+.devlog-list li {
+  text-align: left; /* Ensures each link is centered */
+}
+
+.devlog-list a {
+  color: #6caedd;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.devlog-list a:hover {
+  text-decoration: underline;
+}
+
 .devlog-content {
   padding: 1rem;
 }
@@ -61,6 +100,10 @@ body {
   color: #dcdcdc;
 }
 
+.devlog-list .tabbed {
+  padding-left: 1.5rem; /* Indent the text */
+}
+
 .devlog-footer {
   font-size: 1rem;
   font-style: italic;
@@ -81,4 +124,42 @@ body {
     margin: 10px auto; /* Center the images */
     max-width: 80%; /* Limit the width to maintain responsive design */
     height: auto; /* Maintain aspect ratio */
-  }
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%; /* Make sure it stretches the full width */
+}
+
+.pagination a {
+  color: #6caedd;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pagination a:hover {
+  text-decoration: underline;
+}
+
+.pagination a:active {
+  color: #e6e6e6;
+}
+  
+.pagination a:disabled,
+.pagination a[aria-disabled="true"] {
+    color: #555;
+    pointer-events: none;
+    background-color: transparent;
+}
+  

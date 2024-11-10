@@ -3,7 +3,7 @@ import "../../components/styles/Devlog.css";
 //Import enemy images
 import GiantMammoth from "../../resources/images/GiantMammoth.png";
 
-function Devlog1() {
+const Devlog1: React.FC = () => {
   return (
     <div className="devlog-wrapper">
       <div className="devlog-content">
@@ -136,6 +136,6 @@ function Devlog1() {
       </div>
     </div>
   );
-}
+};
 
 export default Devlog1;

@@ -5,7 +5,7 @@ import meleeCavemanImg from "../../resources/images/MeleeCaveman.png";
 import rangedCavemanImg from "../../resources/images/RangedCaveman.png";
 import toddlerCavemanImg from "../../resources/images/ToddlerCaveman.png";
 
-function Devlog0() {
+const Devlog0: React.FC = () => {
   return (
     <div className="devlog-wrapper">
       <div className="devlog-content">
@@ -97,6 +97,6 @@ function Devlog0() {
       </div>
     </div>
   );
-}
+};
 
 export default Devlog0;
