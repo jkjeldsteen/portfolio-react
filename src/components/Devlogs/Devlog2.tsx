@@ -1,5 +1,10 @@
 import React from "react";
 import "../../components/styles/Devlog.css";
+import MeleeCavemanRunGif from "../../resources/gifs/Melee_Caveman_Run.gif";
+import RangedCavemanRunGif from "../../resources/gifs/Ranged_Caveman_Run.gif";
+import PauseMenuScreenshot from "../../resources/images/PauseMenu Screenshot.png";
+import GameplayScreenshot from "../../resources/images/GameplayScreenshot.png";
+import UpgradeShop from "../../resources/images/UpgradeShop.png";
 
 const Devlog2: React.FC = () => {
   return (
@@ -30,7 +35,6 @@ const Devlog2: React.FC = () => {
               coding and game design while bringing in assets that can elevate
               the visual quality.
             </li>
-            <br />
             <li>
               <strong>Level 2 Planning:</strong> Although development has
               shifted back to Level 1, I’ve continued some preliminary planning
@@ -48,14 +52,19 @@ const Devlog2: React.FC = () => {
               updates include:
               <br />
               <span className="tabbed">
-                <strong>Settings Menu:</strong> Now includes essential options
-                to allow players to customize their gameplay experience.
+                <strong> - Settings Menu:</strong> Now includes essential
+                options to allow players to customize their gameplay experience.
                 <br />
               </span>
               <span className="tabbed">
-                <strong>Pause Menu:</strong> Added to give players control to
+                <strong> - Pause Menu:</strong> Added to give players control to
                 pause during gameplay. A new option allows players to abandon a
                 level, though they’ll lose any progress made in that run.
+                <img
+                  src={PauseMenuScreenshot}
+                  alt="Pause Menu Screenshot"
+                  className="enemy-image"
+                />
               </span>
             </li>
             <li>
@@ -64,19 +73,29 @@ const Devlog2: React.FC = () => {
               introduced an upgrade shop where players can improve stats, adding
               depth to progression by allowing players to invest in upgrades
               over time.
+              <img
+                src={UpgradeShop}
+                alt="Upgrade Shop Screenshot"
+                className="enemy-image"
+              />
             </li>
             <li>
-              <strong>Post-Processing & HUD Elements:</strong>To enhance
+              <strong>Post-Processing & HUD Elements:</strong> To enhance
               immersion, I’ve incorporated subtle post-processing effects and
               added new HUD elements, including:
               <br />
-              <strong>Run timer:</strong> Tracks the duration of each run.
+              <strong> - Run timer:</strong> Tracks the duration of each run.
               <br />
-              <strong>Wave Counter:</strong> Shows players how many enemy waves
-              they’ve faced in a session.
+              <strong> - Wave Counter:</strong> Shows players how many enemy
+              waves they’ve faced in a session.
               <br />
-              <strong>Coin Pouch:</strong> Displays the coins collected during
-              each run, helping players keep track of their resources.
+              <strong> - Coin Pouch:</strong> Displays the coins collected
+              during each run, helping players keep track of their resources.
+              <img
+                src={GameplayScreenshot}
+                alt="Game Screenshot"
+                className="enemy-image"
+              />
             </li>
           </ul>
 
@@ -91,14 +110,26 @@ const Devlog2: React.FC = () => {
               richer atmosphere, enhancing the frozen landscape that players
               will be navigating.
             </li>
-            <br />
             <li>
               <strong>Character Model & Enemy Animations:</strong> I’ve also
               invested in a base character model that I can modify as needed.
               Using this model, I’ve enhanced animations for the Club Caveman
               and Stone Thrower Caveman, bringing these enemies to life with
               smoother movement. Updates for the Cavetoddler are still pending
-              but are on the horizon.
+              but are on the horizon. Catch a peek at the run animations for the
+              Club caveman and Stone Thrower caveman below:
+              <div className="animation-gifs">
+                <img
+                  src={MeleeCavemanRunGif}
+                  alt="Club Caveman Animation"
+                  className="devlog-gif"
+                />
+                <img
+                  src={RangedCavemanRunGif}
+                  alt="Stone Thrower Caveman Animation"
+                  className="devlog-gif"
+                />
+              </div>
             </li>
           </ul>
 
