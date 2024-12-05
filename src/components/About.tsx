@@ -18,19 +18,30 @@ function About() {
         <h1>About Me</h1>
         <p>👋</p>
         <p>
-          Hi there! I'm Jakob Kjeldsteen, a 24-year-old tech enthusiast with an
-          AP degree in Computer Science from UCN Aalborg, Denmark. 🎓
+          Hi there! I'm Jakob Kjeldsteen, a 24-year-old software developer with
+          an AP degree in Computer Science from UCN Aalborg, Denmark. 🎓
         </p>
         <p>
-          When I'm not coding, you'll find me diving into video games, either
-          solo or with friends. Whether it's Minecraft, League of Legends,
-          Counter-Strike, or countless others, I'm always up for a challenge! 🎮
+          I specialize in backend and fullstack development, with hands-on
+          experience in C#, MSSQL, PostgreSQL, and React/TypeScript. I've worked
+          on complex projects, including a Consent Management Platform developed
+          in collaboration with Jyllands-Posten/Politiken, where I built a
+          robust backend in C# integrated with an MSSQL database and a
+          user-friendly React-based frontend.
         </p>
         <p>
-          I'm also passionate about game development. I've dabbled in creating
-          my own "indie" games, recreating classics like "Asteroids," "Doodle
-          Jump," and "Geometry Dash." Curious? You can check out some of my
-          creations right in your browser here:{" "}
+          Collaboration is at the heart of my work ethic. I thrive in team
+          environments, contributing with clear communication, problem-solving,
+          and a willingness to support my colleagues. At the same time, I am
+          highly self-driven and take responsibility for delivering high-quality
+          solutions independently.
+        </p>
+        <p>
+          Beyond coding, I’m passionate about game development, crafting indie
+          games that explore unique mechanics and ideas. I've recreated classics
+          like Asteroids and Doodle Jump while also diving into my own
+          creations, such as Epoch Raiders. You can explore some of these
+          projects on{" "}
           <a
             href="https://jkjeldsteen.itch.io"
             target="_blank"
@@ -39,20 +50,19 @@ function About() {
           >
             Itch.io
           </a>
-          .
         </p>
         <p>
-          My love for gaming extends to the esports arena. I avidly follow major
-          tournaments in League of Legends, Counter-Strike, and Rocket League.
-          Fun fact: I even volunteered as a coach for a children's
-          Counter-Strike team for a couple of years! 🏆
+          When I’m not developing, you’ll find me exploring video games,
+          cheering for my favorite esports teams, or volunteering in gaming
+          communities. Fun fact: I spent two years coaching a Youth
+          Counter-Strike team, combining my love for gaming and mentorship.
         </p>
         <p>
-          Want to dive deeper into my journey? Take a peek at my{" "}
+          Curious about my professional journey? Take a look at my{" "}
           <a href="#!" onClick={handleDownload} style={{ color: "#31ebad" }}>
             resumé
           </a>
-          . 📄
+          . 📄 or reach out for a chat. Let’s create something amazing together!
         </p>
       </div>
     </div>
