@@ -18,30 +18,16 @@ function About() {
         <h1>About Me</h1>
         <p>👋</p>
         <p>
-          Hi there! I'm Jakob Kjeldsteen, a 24-year-old software developer with
-          an AP degree in Computer Science from UCN Aalborg, Denmark. 🎓
+          Hey! I’m Jakob Kjeldsteen — a 25-year-old software developer currently studying for a Bachelor of Software Development with a specialization in Game Development. I also hold an AP degree in Computer Science from UCN Aalborg, Denmark.
         </p>
         <p>
-          I specialize in backend and fullstack development, with hands-on
-          experience in C#, MSSQL, PostgreSQL, and React/TypeScript. I've worked
-          on complex projects, including a Consent Management Platform developed
-          in collaboration with Jyllands-Posten/Politiken, where I built a
-          robust backend in C# integrated with an MSSQL database and a
-          user-friendly React-based frontend.
+          I’ve spent the last few years working with C#, MSSQL, PostgreSQL, and React/TypeScript, mostly doing backend and full-stack development. One of my biggest projects was building a full Consent Management Platform together with Jyllands-Posten/Politiken, where I handled everything from the C# backend and MSSQL database to parts of the React frontend.
         </p>
         <p>
-          Collaboration is at the heart of my work ethic. I thrive in team
-          environments, contributing with clear communication, problem-solving,
-          and a willingness to support my colleagues. At the same time, I am
-          highly self-driven and take responsibility for delivering high-quality
-          solutions independently.
+          I love working with other people — bouncing ideas around, solving problems together, and building cool things as a team. Game Jams have been a huge part of that for me; there’s something really exciting about collaborating under pressure, turning rough ideas into playable prototypes, and learning from everyone involved. At the same time, I’m very self-driven and enjoy taking ownership of features and seeing them all the way from idea to final, polished result.
         </p>
         <p>
-          Beyond coding, I’m passionate about game development, crafting indie
-          games that explore unique mechanics and ideas. I've recreated classics
-          like Asteroids and Doodle Jump while also diving into my own
-          creations, such as Epoch Raiders. You can explore some of these
-          projects on{" "}
+          But at the end of the day, game development is where my passion really shines. I’m constantly experimenting with new mechanics, building prototypes, and challenging myself to learn more about game design and programming. I’ve recreated classics like Asteroids and Doodle Jump, and I've been working on my own original projects like Epoch Raiders. You can check out some of my games on {" "}
           <a
             href="https://jkjeldsteen.itch.io"
             target="_blank"
@@ -50,19 +36,17 @@ function About() {
           >
             Itch.io
           </a>
+           . I love sharing what I make.
         </p>
         <p>
-          When I’m not developing, you’ll find me exploring video games,
-          cheering for my favorite esports teams, or volunteering in gaming
-          communities. Fun fact: I spent two years coaching a Youth
-          Counter-Strike team, combining my love for gaming and mentorship.
+          When I'm not coding, I’m usually playing games, following esports, or hanging out in gaming communities. And fun fact: I spent two years coaching a youth Counter-Strike team, which combined my love of gaming with teaching and mentoring.
         </p>
         <p>
-          Curious about my professional journey? Take a look at my{" "}
+          If you're curious about my work, feel free to check out my {" "}
           <a href="#!" onClick={handleDownload} style={{ color: "#31ebad" }}>
             resumé
-          </a>
-          . 📄 or reach out for a chat. Let’s create something amazing together!
+          </a>!
+          or just reach out. I’m always up for a chat — or to build something awesome together!
         </p>
       </div>
     </div>

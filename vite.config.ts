@@ -21,6 +21,9 @@ export default defineConfig({
         path.resolve(process.cwd(), 'public'),
         process.cwd() // Allow project root for index.html
       ]
-    }
+    },
+    allowedHosts: [
+      'jkjeldsteen.com'
+    ]
   },
 })
