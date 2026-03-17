@@ -40,8 +40,8 @@ function Home() {
       {/* Quick Stats Section */}
       <div className="quick-stats-section">
         <div className="stat-card">
-          <h3>3+</h3>
-          <p>Years Professional Experience</p>
+          <h3>1</h3>
+          <p>Year Professional Experience</p>
         </div>
         <div className="stat-card">
           <h3>7+</h3>
