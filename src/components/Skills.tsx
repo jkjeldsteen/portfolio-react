@@ -15,19 +15,30 @@ import gitIcon from "../resources/svg/git-svgrepo-com.svg";
 import agileIcon from "../resources/svg/scrum-svgrepo-com.svg";
 import stripeIcon from "../resources/svg/stripe-svgrepo-com.svg";
 import kubernetesIcon from "../resources/svg/kubernetes-svgrepo-com.svg";
+import unityIcon from "../resources/svg/unity-svgrepo-com.svg";
 import { faDocker } from "@fortawesome/free-brands-svg-icons";
 
 function Skills() {
   return (
     <div className="skills-wrapper">
       <div className="skills-container">
-        <h1>Skills</h1><div className="skills-category">
-          <h2>Backend:</h2>
+        <h1>Skills</h1>
+        <div className="featured-skills">
+          <h2>Primary Skills</h2>
           <ul>
             <li>
-              <img src={csharpIcon} alt="C#" className="icon" />
+              <img src={unityIcon} alt="Unity" className="icon featured-icon" />
+              <span>Unity</span>
+            </li>
+            <li>
+              <img src={csharpIcon} alt="C#" className="icon featured-icon" />
               <span>C#</span>
             </li>
+          </ul>
+        </div>
+        <div className="skills-category">
+          <h2>Backend:</h2>
+          <ul>
             <li>
               <img src={Golang} alt="Go" className="icon" />
               <span>GoLang</span>
@@ -85,7 +96,7 @@ function Skills() {
             <li>
               <FontAwesomeIcon icon={faDocker} size="3x" className="blackIcon" />
               <span>Docker</span>
-            </li> 
+            </li>
             <li>
               <img src={kubernetesIcon} alt="K8s" className="icon" />
               <span>Kubernetes</span>

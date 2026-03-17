@@ -18,16 +18,19 @@ function About() {
         <h1>About Me</h1>
         <p>👋</p>
         <p>
-          Hey! I’m Jakob Kjeldsteen — a 25-year-old software developer currently studying for a Bachelor of Software Development with a specialization in Game Development. I also hold an AP degree in Computer Science from UCN Aalborg, Denmark.
+          Hey! I’m Jakob Kjeldsteen, a 25-year-old software developer currently studying for a Bachelor of Software Development with a specialization in Game Development. I also hold an AP degree in Computer Science from UCN Aalborg, Denmark.
         </p>
         <p>
-          I’ve spent the last few years working with C#, MSSQL, PostgreSQL, and React/TypeScript, mostly doing backend and full-stack development. One of my biggest projects was building a full Consent Management Platform together with Jyllands-Posten/Politiken, where I handled everything from the C# backend and MSSQL database to parts of the React frontend.
+          I’m primarily focused on C# and Unity development. Professionally, I’ve built Digital Twin simulations and real-time visualization systems integrating with industrial PLC systems. I’ve also worked extensively with backend systems using C#, MSSQL, PostgreSQL, and full-stack web development with React/TypeScript. One of my standout projects was building a full Consent Management Platform for Jyllands-Posten/Politiken, where I handled the C# backend, MSSQL database, and parts of the React frontend.
         </p>
         <p>
-          I love working with other people — bouncing ideas around, solving problems together, and building cool things as a team. Game Jams have been a huge part of that for me; there’s something really exciting about collaborating under pressure, turning rough ideas into playable prototypes, and learning from everyone involved. At the same time, I’m very self-driven and enjoy taking ownership of features and seeing them all the way from idea to final, polished result.
+          Beyond professional work, game development is where my passion truly shines. I use the same C# and Unity expertise to create games, from polished prototypes to more ambitious projects. I’ve recreated classics like Asteroids and Doodle Jump, and I’m continuously working on original titles like Epoch Raiders. This blend of professional simulation work and personal game development has given me deep expertise in real-time systems, optimization, and creating engaging interactive experiences.
         </p>
         <p>
-          But at the end of the day, game development is where my passion really shines. I’m constantly experimenting with new mechanics, building prototypes, and challenging myself to learn more about game design and programming. I’ve recreated classics like Asteroids and Doodle Jump, and I've been working on my own original projects like Epoch Raiders. You can check out some of my games on {" "}
+          I thrive working with other people by collaborating on complex technical challenges, solving architectural problems together, and building innovative systems as a team. Teamwork has taught me the value of good communication, adaptability, and shared vision. At the same time, I’m very self-driven and take ownership of my work from initial design all the way through to deployment and optimization.
+        </p>
+        <p>
+          You can check out my games on {" "}
           <a
             href="https://jkjeldsteen.itch.io"
             target="_blank"
@@ -36,17 +39,23 @@ function About() {
           >
             Itch.io
           </a>
-           . I love sharing what I make.
+          , and explore my {" "}
+          <a
+            href="https://github.com/jkjeldsteen"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#31ebad" }}
+          >
+            GitHub
+          </a>
+          {" "}to see the work behind them.
         </p>
         <p>
-          When I'm not coding, I’m usually playing games, following esports, or hanging out in gaming communities. And fun fact: I spent two years coaching a youth Counter-Strike team, which combined my love of gaming with teaching and mentoring.
-        </p>
-        <p>
-          If you're curious about my work, feel free to check out my {" "}
+          If you’re curious about my work, feel free to check out my {" "}
           <a href="#!" onClick={handleDownload} style={{ color: "#31ebad" }}>
             resumé
           </a>!
-          or just reach out. I’m always up for a chat — or to build something awesome together!
+          Or just reach out. I’m always up for a chat or to build something awesome together!
         </p>
       </div>
     </div>

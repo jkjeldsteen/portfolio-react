@@ -1,48 +1,62 @@
 .about-wrapper {
-    font-family: 'Georama', sans-serif;
+    font-family: var(--font-family);
     margin: 0;
-    padding: 20px;
-    background-color: #121212;
-    color: #ccc; /* Light text color */
+    padding: var(--space-lg);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-primary);
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    min-height: 100vh; /* Ensure the wrapper takes full viewport height */
-    box-sizing: border-box; /* Include padding in width calculations */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .about-content {
-    width: 80%; /* Adjust width as needed */
-    max-width: 800px; /* Limit maximum width */
-    overflow: auto; /* Enable scrolling if content overflows */
-    background-size: cover;
-    background-position: center;
-    padding: 20px; /* Padding inside the content area */
-    color: #E0E0E0; /* Light text color for content */
-    display: flex; /* Use flexbox for content alignment */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: flex-start; /* Align content to the start */
-    box-sizing: border-box; /* Include padding in width calculations */
+    width: 80%;
+    max-width: 800px;
+    overflow: auto;
+    padding: var(--space-lg);
+    color: var(--color-text-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
 }
 
 .about-content h1 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    padding-left: 30px;
-    box-sizing: border-box; /* Include padding in width calculations */
+    font-size: var(--font-size-h2);
+    margin-bottom: var(--space-lg);
+    padding-left: var(--space-lg);
+    box-sizing: border-box;
+    color: var(--color-text-primary);
+    border-bottom: 1px solid var(--color-primary-accent);
+    padding-bottom: var(--space-md);
 }
 
 .about-content p {
-    font-size: 1.4em;
-    margin-bottom: 20px;
-    padding-left: 30px;
-    box-sizing: border-box; /* Include padding in width calculations */
+    font-size: var(--font-size-body);
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-lg);
+    box-sizing: border-box;
+    color: var(--color-text-secondary);
+    line-height: var(--line-height);
+}
+
+.about-content a {
+    color: var(--color-primary-accent);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.about-content a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1024px) {
     .about-content {
-        width: 90%; /* Adjust width for smaller screens */
+        width: 90%;
     }
 }
 
@@ -54,7 +68,13 @@
 
 @media screen and (max-width: 425px) {
     .about-content {
-        height: auto; /* Allow height to adjust for content */
+        height: auto;
         width: 100%;
+        padding: var(--space-md);
+    }
+
+    .about-content p {
+        font-size: var(--font-size-body);
+        padding-left: var(--space-md);
     }
 }

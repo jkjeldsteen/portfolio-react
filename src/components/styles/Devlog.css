@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Georama:wght@400;600&display=swap');
 
 body {
-  font-family: 'Georama', sans-serif;
-  background-color: #121212;
-  color: #f5f5f5;
+  font-family: var(--font-family);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
   margin: 0;
   padding: 0;
 }
@@ -11,18 +11,19 @@ body {
 .devlog-wrapper {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
-  background-color: #1e1e1e;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-  border-radius: 8px;
+  padding: var(--space-xl);
+  background-color: var(--color-bg-surface);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
 }
 
 /* Style the devlog list title */
 .devlog-subtitle {
-  font-size: 1.8rem;
+  font-size: var(--font-size-h3);
   font-weight: bold;
-  color: #e6e6e6;
-  margin-bottom: 1.5rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-lg);
 }
 
 /* Style the devlog list */
@@ -32,148 +33,150 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; /* Space between list items */
-  width: 100%; /* Ensures list takes full available width */
-  text-align: left; /* Center the text inside each item */
+  gap: var(--space-sm);
+  width: 100%;
+  text-align: left;
 }
 
 /* Style each devlog link */
 .devlog-list li {
-  text-align: left; /* Ensures each link is centered */
+  text-align: left;
 }
 
 .devlog-list a {
-  color: #6caedd;
-  font-size: 1.4rem;
+  color: var(--color-primary-accent);
+  font-size: var(--font-size-h4);
   font-weight: bold;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .devlog-list a:hover {
-  text-decoration: underline;
+  background-color: rgba(49, 235, 173, 0.1);
+  text-decoration: none;
 }
 
 .devlog-content {
-  padding: 1rem;
+  padding: var(--space-md);
 }
 
 .devlog-title {
-  font-size: 2.5rem;
-  color: #e6e6e6;
+  font-size: var(--font-size-h1);
+  color: var(--color-text-primary);
   font-weight: 600;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-2xl);
+  border-bottom: 1px solid var(--color-primary-accent);
+  padding-bottom: var(--space-lg);
 }
 
 .devlog-entry {
-  margin-bottom: 3rem;
-}
-
-.devlog-subtitle {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-2xl);
 }
 
 .devlog-section-title {
-  font-size: 1.5rem;
+  font-size: var(--font-size-h3);
   font-weight: 600;
-  color: #6caedd;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  color: var(--color-primary-accent);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .devlog-text {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #dcdcdc;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
 }
 
 .devlog-list {
   list-style-type: disc;
-  margin-left: 2rem;
-  color: #dcdcdc;
+  margin-left: var(--space-xl);
+  color: var(--color-text-secondary);
 }
 
 .devlog-list .tabbed {
-  padding-left: 1.5rem; /* Indent the text */
+  padding-left: var(--space-lg);
 }
 
 .devlog-footer {
-  font-size: 1rem;
+  font-size: var(--font-size-small);
   font-style: italic;
-  margin-top: 2rem;
-  color: #a0a0a0;
+  margin-top: var(--space-xl);
+  color: var(--color-text-tertiary);
 }
 
 .devlog-signature {
-  font-size: 1.2rem;
+  font-size: var(--font-size-h4);
   font-weight: 600;
-  color: #ffffff;
-  margin-top: 1rem;
+  color: var(--color-text-primary);
+  margin-top: var(--space-lg);
   text-align: right;
 }
 
 .enemy-image {
     display: block;
-    margin: 10px auto; /* Center the images */
-    max-width: 80%; /* Limit the width to maintain responsive design */
-    height: auto; /* Maintain aspect ratio */
+    margin: var(--space-md) auto;
+    max-width: 80%;
+    height: auto;
+    border-radius: var(--radius-md);
 }
 
 .pagination-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
-  padding-top: 2rem;
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
 }
 
 .pagination {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2rem;
-  width: 100%; /* Make sure it stretches the full width */
+  margin-top: var(--space-xl);
+  width: 100%;
+  gap: var(--space-lg);
 }
 
 .pagination a {
-  color: #6caedd;
-  font-size: 1.2rem;
+  color: var(--color-primary-accent);
+  font-size: var(--font-size-h4);
   font-weight: 600;
   text-decoration: none;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
 }
 
 .pagination a:hover {
-  text-decoration: underline;
+  background-color: rgba(49, 235, 173, 0.1);
+  text-decoration: none;
 }
 
 .pagination a:active {
-  color: #e6e6e6;
+  color: var(--color-text-primary);
 }
-  
+
 .pagination a:disabled,
 .pagination a[aria-disabled="true"] {
-    color: #555;
+    color: var(--color-text-tertiary);
     pointer-events: none;
     background-color: transparent;
 }
 
 .animation-gifs {
   display: flex;
-  justify-content: center; /* Centers the GIFs horizontally */
-  gap: 1rem; /* Space between the GIFs */
-  margin-top: 1rem; /* Space above the GIFs */
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
 }
 
 .devlog-gif {
-  width: 150px; /* Adjust size as needed */
+  width: 150px;
   height: auto;
-  border-radius: 4px; /* Optional: rounded corners */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for style */
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
 }
-  

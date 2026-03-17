@@ -16,6 +16,39 @@ function Work() {
     <div className="projects-wrapper">
       <div className="main-content">
         <div className="projects-container">
+          <a
+            href="https://www.marel.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-link"
+          >
+            <Card className="card bg-transparent text-white shadow-lg rounded-lg overflow-hidden flex flex-col">
+              <CardHeader>
+                <CardTitle className="text-xl font-bold">
+                  JBT Marel - Student Developer & Intern - Want to learn more? Click me
+                </CardTitle>
+                <CardDescription className="text-sm mt-2">
+                  Student Developer & Intern
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                As a student developer and intern at JBT Marel, I developed an internal ordering system to modernize and streamline workflows in the development department. I created and supported a Unity-based simulation and Digital Twin for developing a new machine, implementing integration between the Unity simulation and Beckhoff PLC systems. I participated in concept development, technical decision-making processes, and was responsible for aspects of software architecture and stakeholder coordination.
+              </CardContent>
+              <CardFooter className="flex flex-wrap items-center space-x-1 md:space-x-2 mb-2 md:mb-0 mt-auto">
+                <div className="flex items-center space-x-1">
+                  <Badge className="whitespace-nowrap">C#</Badge>
+                  <Badge className="whitespace-nowrap">Unity</Badge>
+                  <Badge className="whitespace-nowrap">Beckhoff PLC</Badge>
+                  <Badge className="whitespace-nowrap">.NET</Badge>
+                </div>
+                <div>
+                  <span className="whitespace-nowrap">
+                    February 1st, 2025 - June 30th, 2026
+                  </span>
+                </div>
+              </CardFooter>
+            </Card>
+          </a>
           <Card className="card bg-transparent text-white shadow-lg rounded-lg overflow-hidden flex flex-col">
             <CardHeader>
               <CardTitle className="text-xl font-bold">
@@ -26,24 +59,20 @@ function Work() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              I make video games in my spare time mostly using the Unity game
-              engine. Check it out here. I have for example reinterpreted
-              Asteroids, Geometry Dash, and Doodle Jump. And then I've also made
-              a couple of my own games. I really think you should check out my
-              tower defense inspired game Gold mine defender
+              I develop games in my spare time using Unity and C#. I've created reimagined versions of classic games including Asteroids, Geometry Dash, and Doodle Jump, exploring different game mechanics and design patterns. My primary focus is Epoch Raiders, a 2D top-down shooter with roguelike elements that showcases advanced game mechanics, enemy AI, procedural level design, and pixel art animation. This is my most ambitious project, combining technical implementation with creative vision.
             </CardContent>
             <CardFooter className="flex flex-wrap items-center space-x-1 md:space-x-2 mb-2 md:mb-0 mt-auto">
               <div className="flex items-center space-x-1">
-                <Badge className="text-white whitespace-nowrap">C#</Badge>
-                <Badge className="text-white whitespace-nowrap">Unity</Badge>
+                <Badge className="whitespace-nowrap">C#</Badge>
+                <Badge className="whitespace-nowrap">Unity</Badge>
               </div>
               <div className="flex-1 text-center">
                 <a
-                  href="https://jkjeldsteen.itch.io"
+                  href="https://jkjeldsteen.itch.io/epoch-raiders"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button variant={"outline"}>Gold Mine Defender</Button>
+                  <Button variant={"outline"}>Epoch Raiders</Button>
                 </a>
               </div>
               <div>
@@ -75,8 +104,8 @@ function Work() {
               </CardContent>
               <CardFooter className="flex flex-wrap items-center space-x-1 md:space-x-2 mb-2 md:mb-0 mt-auto">
                 <div className="flex items-center space-x-1">
-                  <Badge className="text-white whitespace-nowrap">GoLang</Badge>
-                  <Badge className="text-white whitespace-nowrap">Stripe</Badge>
+                  <Badge className="whitespace-nowrap">GoLang</Badge>
+                  <Badge className="whitespace-nowrap">Stripe</Badge>
                 </div>
                 <div>
                   <span>July 1st, 2024 - July 31st, 2024</span>
@@ -111,12 +140,12 @@ function Work() {
               </CardContent>
               <CardFooter className="flex flex-wrap items-center space-x-1 md:space-x-2 mb-2 md:mb-0 mt-auto">
                 <div className="flex items-center space-x-1">
-                  <Badge className="text-white whitespace-nowrap">PHP</Badge>
-                  <Badge className="text-white whitespace-nowrap">React</Badge>
-                  <Badge className="text-white whitespace-nowrap">
+                  <Badge className="whitespace-nowrap">PHP</Badge>
+                  <Badge className="whitespace-nowrap">React</Badge>
+                  <Badge className="whitespace-nowrap">
                     Typescript
                   </Badge>
-                  <Badge className="text-white whitespace-nowrap">
+                  <Badge className="whitespace-nowrap">
                     Tizen 6.5
                   </Badge>
                 </div>
@@ -155,10 +184,10 @@ function Work() {
               </CardContent>
               <CardFooter className="flex flex-wrap items-center space-x-1 md:space-x-2 mb-2 md:mb-0 mt-auto">
                 <div className="flex items-center space-x-1">
-                  <Badge className="text-white whitespace-nowrap">C#</Badge>
-                  <Badge className="text-white whitespace-nowrap">SQL</Badge>
-                  <Badge className="text-white whitespace-nowrap">React</Badge>
-                  <Badge className="text-white whitespace-nowrap">
+                  <Badge className="whitespace-nowrap">C#</Badge>
+                  <Badge className="whitespace-nowrap">SQL</Badge>
+                  <Badge className="whitespace-nowrap">React</Badge>
+                  <Badge className="whitespace-nowrap">
                     Typescript
                   </Badge>
                 </div>
@@ -196,8 +225,8 @@ function Work() {
               </CardContent>
               <CardFooter className="flex flex-wrap items-center space-x-1 md:space-x-2 mb-2 md:mb-0 mt-auto">
                 <div className="flex items-center space-x-1">
-                  <Badge className="text-white whitespace-nowrap">Vue.js</Badge>
-                  <Badge className="text-white whitespace-nowrap">
+                  <Badge className="whitespace-nowrap">Vue.js</Badge>
+                  <Badge className="whitespace-nowrap">
                     Javascript
                   </Badge>
                 </div>
@@ -234,10 +263,10 @@ function Work() {
               </CardContent>
               <CardFooter className="flex flex-wrap items-center space-x-1 md:space-x-2 mb-2 md:mb-0 mt-auto">
                 <div className="flex items-center space-x-1">
-                  <Badge className="text-white whitespace-nowrap">C#</Badge>
-                  <Badge className="text-white whitespace-nowrap">.NET</Badge>
-                  <Badge className="text-white whitespace-nowrap">SQL</Badge>
-                  <Badge className="text-white whitespace-nowrap">
+                  <Badge className="whitespace-nowrap">C#</Badge>
+                  <Badge className="whitespace-nowrap">.NET</Badge>
+                  <Badge className="whitespace-nowrap">SQL</Badge>
+                  <Badge className="whitespace-nowrap">
                     WinForms
                   </Badge>
                 </div>
@@ -273,9 +302,9 @@ function Work() {
               </CardContent>
               <CardFooter className="flex flex-wrap items-center space-x-1 md:space-x-2 mb-2 md:mb-0 mt-auto">
                 <div className="flex items-center space-x-1">
-                  <Badge className="text-white whitespace-nowrap">Java</Badge>
-                  <Badge className="text-white whitespace-nowrap">SQL</Badge>
-                  <Badge className="text-white whitespace-nowrap">
+                  <Badge className="whitespace-nowrap">Java</Badge>
+                  <Badge className="whitespace-nowrap">SQL</Badge>
+                  <Badge className="whitespace-nowrap">
                     WindowBuilder
                   </Badge>
                 </div>
