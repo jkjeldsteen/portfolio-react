@@ -17,6 +17,7 @@
 
 .skills-container h1 {
     color: var(--color-text-primary);
+    margin-top: var(--space-2xl);
     margin-bottom: var(--space-lg);
     font-size: var(--font-size-h2);
     border: 1px solid var(--color-primary-accent);
@@ -110,6 +111,12 @@
     width: 50px;
     height: 50px;
     color: var(--color-primary-accent);
+}
+
+.skills-category ul li .dockerIcon {
+    width: 50px;
+    height: 50px;
+    color: #2496ED;
 }
 
 .skills-category ul li .icon svg {

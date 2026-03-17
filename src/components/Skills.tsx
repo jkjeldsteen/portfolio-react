@@ -94,7 +94,7 @@ function Skills() {
               <span>Git</span>
             </li>
             <li>
-              <FontAwesomeIcon icon={faDocker} size="3x" className="blackIcon" />
+              <FontAwesomeIcon icon={faDocker} size="3x" className="dockerIcon" />
               <span>Docker</span>
             </li>
             <li>

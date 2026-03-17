@@ -123,6 +123,16 @@
   transform: translateY(-4px);
 }
 
+.stat-card-link {
+  cursor: pointer;
+}
+
+.stat-card-link:hover {
+  border-color: var(--color-primary-accent);
+  box-shadow: var(--shadow-accent);
+  transform: translateY(-4px);
+}
+
 .stat-card h3 {
   font-size: 2.5em;
   color: var(--color-primary-accent);
@@ -256,9 +266,7 @@
    ============================================ */
 
 .about-snippet-section {
-  background-color: var(--color-bg-surface);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg-base);
   padding: var(--space-2xl);
   margin-left: 10%;
   max-width: 1200px;
@@ -276,6 +284,10 @@
   line-height: 1.7;
   margin: 0 0 var(--space-lg) 0;
   max-width: 900px;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
 }
 
 .learn-more-link {

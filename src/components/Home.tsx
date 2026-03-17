@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../components/styles/Home.css";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import resumePdf from "../resources/resume.pdf";
 
 function Home() {
   return (
@@ -16,20 +17,18 @@ function Home() {
               Full-Stack Developer & Game Enthusiast
             </p>
             <p className="hero-description">
-              Building digital simulations, roguelike games, and scalable
-              backend systems. I bridge professional software development
-              with creative game design.
+              Building digital simulations, games, and scalable backend systems.
             </p>
 
             {/* CTA Buttons */}
             <div className="cta-buttons">
               <Link to="/work">
-                <Button variant="default">View My Work</Button>
+                <Button variant="outline">View My Work</Button>
               </Link>
               <Link to="/contact">
                 <Button variant="outline">Get in Touch</Button>
               </Link>
-              <a href="../resources/resume.pdf" download>
+              <a href={resumePdf} download="JakobKjeldsteen_Resume.pdf">
                 <Button variant="outline">Download Resume</Button>
               </a>
             </div>
@@ -43,10 +42,12 @@ function Home() {
           <h3>1</h3>
           <p>Year Professional Experience</p>
         </div>
-        <div className="stat-card">
-          <h3>7+</h3>
-          <p>Completed Projects</p>
-        </div>
+        <a href="https://github.com/jkjeldsteen" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+          <div className="stat-card stat-card-link">
+            <h3>7+</h3>
+            <p>Completed Projects</p>
+          </div>
+        </a>
         <div className="stat-card">
           <h3>Full-Stack</h3>
           <p>Backend, Frontend & Game Dev</p>
@@ -74,7 +75,7 @@ function Home() {
             </div>
             <div className="featured-buttons">
               <a href="https://jkjeldsteen.itch.io/epoch-raiders" target="_blank" rel="noopener noreferrer">
-                <Button variant="default">Play on Itch.io</Button>
+                <Button variant="outline">Play on Itch.io</Button>
               </a>
               <Link to="/devlogs">
                 <Button variant="outline">Read Devlogs</Button>
@@ -125,7 +126,7 @@ function Home() {
           in Software Development with a Game Development specialization.
           Professionally, I've built digital twin simulations and backend systems
           for industrial applications. Outside work, I'm passionate about game
-          development—creating engaging mechanics, polish, and interactive
+          development, creating engaging mechanics, polish, and interactive
           experiences. I thrive on solving complex technical challenges while
           maintaining creative vision.
         </p>
