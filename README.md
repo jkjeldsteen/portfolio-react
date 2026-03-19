@@ -28,7 +28,7 @@ A modern, responsive personal portfolio built with React and TypeScript. Showcas
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/portfolio-react.git
+git clone https://github.com/jkjeldsteen/portfolio-react.git
 cd portfolio-react
 ```
 
