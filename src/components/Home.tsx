@@ -17,7 +17,7 @@ function Home() {
               Full-Stack Developer & Game Enthusiast
             </p>
             <p className="hero-description">
-              Building digital simulations, games, and scalable backend systems.
+              Building digital simulations, developing games, and scalable backend systems.
             </p>
 
             {/* CTA Buttons */}
@@ -54,32 +54,59 @@ function Home() {
         </div>
       </div>
 
-      {/* Featured Project */}
+      {/* Featured Projects */}
       <div className="featured-section">
-        <h2>Featured Project</h2>
-        <div className="featured-project">
-          <div className="featured-text">
-            <h3>Epoch Raiders</h3>
-            <p className="featured-type">Personal Game Development</p>
-            <p className="featured-description">
-              A 2D top-down roguelike shooter with advanced enemy AI,
-              procedural level design, custom pixel art animation, and
-              engaging game mechanics. This is my most ambitious project,
-              combining technical implementation with creative vision.
-            </p>
-            <div className="featured-tags">
-              <Badge>C#</Badge>
-              <Badge>Unity</Badge>
-              <Badge>Game Design</Badge>
-              <Badge>Pixel Art</Badge>
+        <h2>Featured Projects</h2>
+        <div className="featured-projects-grid">
+          <div className="featured-project">
+            <div className="featured-text">
+              <h3>Digital Twin & Simulation</h3>
+              <p className="featured-type">Professional Development</p>
+              <p className="featured-description">
+                Advanced simulation systems and digital twin technology developed at JBT Marel. 
+                Leveraging cutting-edge technologies to create virtual representations of 
+                physical systems for concept development, optimization and analysis.
+              </p>
+              <div className="featured-tags">
+                <Badge>Unity</Badge>
+                <Badge>C#</Badge>
+                <Badge>.NET</Badge>
+                <Badge>Beckhoff</Badge>
+                <Badge>Simulation</Badge>
+                <Badge>Digital Twin</Badge>
+              </div>
+              <div className="featured-buttons">
+                <Link to="/work">
+                  <Button variant="outline">Read More</Button>
+                </Link>
+              </div>
             </div>
-            <div className="featured-buttons">
-              <a href="https://jkjeldsteen.itch.io/epoch-raiders" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline">Play on Itch.io</Button>
-              </a>
-              <Link to="/devlogs">
-                <Button variant="outline">Read Devlogs</Button>
-              </Link>
+          </div>
+
+          <div className="featured-project">
+            <div className="featured-text">
+              <h3>Epoch Raiders</h3>
+              <p className="featured-type">Personal Game Development</p>
+              <p className="featured-description">
+                A 2D top-down roguelike shooter with advanced enemy AI,
+                procedural level design, custom pixel art animation, and
+                engaging game mechanics. This is my most ambitious project,
+                combining technical implementation with creative vision.
+              </p>
+              <div className="featured-tags">
+                <Badge>Unity</Badge>
+                <Badge>C#</Badge>
+                <Badge>Game Design</Badge>
+                <Badge>Pixel Art</Badge>
+              </div>
+              <div className="featured-buttons">
+                <a href="https://jkjeldsteen.itch.io/epoch-raiders" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline">Play on Itch.io</Button>
+                </a>
+                <Link to="/devlogs">
+                  <Button variant="outline">Read Devlogs</Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
