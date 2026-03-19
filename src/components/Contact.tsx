@@ -11,10 +11,10 @@ const Contact = () => {
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    //EmailJS serviceID, templateID and Public Key
-    const serviceID = "service_y09huxa";
-    const templateID = "template_hx7mm6a";
-    const publicKey = "KkyM09ugrGO4-lIE4";
+    //EmailJS serviceID, templateID and Public Key from environment variables
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     const templateParams = {
       from_name: name,
