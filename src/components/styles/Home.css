@@ -42,7 +42,13 @@
 .hero-section {
   position: relative;
   z-index: 2;
-  max-width: 700px;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2xl);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .hero-text {
@@ -79,6 +85,90 @@
   gap: var(--space-md);
   flex-wrap: wrap;
   margin-top: var(--space-lg);
+}
+
+/* ============================================
+   PROFILE PHOTO SECTION
+   ============================================ */
+
+.hero-photo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  animation: fadeInPhoto 1.2s ease-in-out;
+  margin-top: var(--space-xl);
+  margin-right: var(--space-xl);
+}
+
+.photo-frame {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--shadow-accent-strong);
+  border: 3px solid var(--color-primary-accent);
+  background: var(--color-bg-surface);
+  transition: all 0.4s ease;
+}
+
+.photo-frame::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-accent),
+    rgba(49, 235, 173, 0.3)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.6;
+  animation: gradientShift 4s ease-in-out infinite;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.95) contrast(1.05);
+  transition: filter 0.4s ease;
+}
+
+.photo-frame:hover .profile-photo {
+  filter: brightness(1) contrast(1.1);
+}
+
+.photo-frame:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-accent-strong);
+}
+
+@keyframes fadeInPhoto {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }
 
 .cta-buttons a {
@@ -400,9 +490,26 @@
     padding: var(--space-xl);
   }
 
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-xl);
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  .photo-frame {
+    width: 250px;
+    height: 250px;
+  }
+
   .cta-buttons {
     flex-direction: column;
     width: 100%;
+    justify-content: center;
   }
 
   .cta-buttons a {
@@ -443,6 +550,11 @@
     font-size: 1em;
   }
 
+  .photo-frame {
+    width: 200px;
+    height: 200px;
+  }
+
   .quick-stats-section {
     grid-template-columns: 1fr;
   }
@@ -474,6 +586,15 @@
 
   .hero-description {
     font-size: 0.95em;
+  }
+
+  .hero-section {
+    gap: var(--space-lg);
+  }
+
+  .photo-frame {
+    width: 180px;
+    height: 180px;
   }
 
   .cta-buttons {

@@ -4,6 +4,7 @@ import "../components/styles/Home.css";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import resumePdf from "../resources/resume.pdf";
+import profilePhoto from "../resources/images/pfpMarch2026.jpg";
 
 function Home() {
   return (
@@ -31,6 +32,13 @@ function Home() {
               <a href={resumePdf} download="JakobKjeldsteen_Resume.pdf">
                 <Button variant="outline">Download Resume</Button>
               </a>
+            </div>
+          </div>
+
+          {/* Profile Photo */}
+          <div className="hero-photo-container">
+            <div className="photo-frame">
+              <img src={profilePhoto} alt="Jakob Kjeldsteen" className="profile-photo" />
             </div>
           </div>
         </div>
