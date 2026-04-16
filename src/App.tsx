@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Work from "./components/Work";
+import Games from "./components/Games";
+import GamePlayer from "./components/GamePlayer";
 import Devlog from "./components/Devlog";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -26,6 +28,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/games" element={<Games />} />
+        <Route path="/games/play/:gameId" element={<GamePlayer />} />
         <Route path="/devlogs/*" element={<Devlog />} />
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />

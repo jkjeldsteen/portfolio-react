@@ -1,0 +1,146 @@
+.games-wrapper {
+    background-color: var(--color-bg-base);
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: var(--space-xl);
+    margin: 0;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.games-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: var(--space-md);
+    text-align: center;
+}
+
+.games-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    line-height: 1.6;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-lg);
+}
+
+.game-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.game-card-link:hover .game-card {
+    box-shadow: var(--shadow-accent-strong);
+    border-color: var(--color-primary-accent);
+    transform: translateY(-4px);
+}
+
+.game-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 0;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.game-preview-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+    flex-shrink: 0;
+}
+
+.game-preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+    will-change: contents;
+}
+
+.game-card-link:hover .game-preview-image {
+    transform: scale(1.05);
+}
+
+/* Card content padding */
+.game-card > [class*="CardHeader"] {
+    padding: var(--space-lg);
+    padding-bottom: var(--space-md);
+}
+
+.game-card > [class*="CardContent"] {
+    padding: 0 var(--space-lg) var(--space-md);
+    flex-grow: 1;
+}
+
+.game-card > [class*="CardFooter"] {
+    padding: var(--space-md) var(--space-lg) var(--space-lg);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1440px) {
+    .main-content {
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main-content {
+        max-width: 700px;
+        margin-left: 0;
+    }
+
+    .games-wrapper {
+        padding: var(--space-lg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-content {
+        max-width: 550px;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .games-title {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+    .games-title {
+        font-size: 1.5rem;
+    }
+
+    .games-subtitle {
+        font-size: 1rem;
+    }
+}
