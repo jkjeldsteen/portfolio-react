@@ -51,6 +51,7 @@ export const GAMES: GameData[] = [
     tags: ["Defense", "Action"],
     buildPath: "/games/warthog-defence",
     previewImage: "/images/game-previews/warthog-defence.png",
+    previewGif: "/images/game-previews/warthog-defence.gif",
   },
   {
     id: "square-jumper",
