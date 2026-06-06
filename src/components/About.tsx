@@ -18,7 +18,7 @@ function About() {
         <h1>About Me</h1>
         <p>👋</p>
         <p>
-          Hey! I’m Jakob Kjeldsteen, a 25-year-old software developer currently studying for a Bachelor of Software Development with a specialization in Game Development. I also hold an AP degree in Computer Science from UCN Aalborg, Denmark.
+          Hey! I’m Jakob Kjeldsteen, a 26-year-old software developer currently studying for a Bachelor of Software Development with a specialization in Game Development. I also hold an AP degree in Computer Science from UCN Aalborg, Denmark.
         </p>
         <p>
           I’m primarily focused on C# and Unity development. Professionally, I’ve built Digital Twin simulations and real-time visualization systems integrating with industrial PLC systems. I’ve also worked extensively with backend systems using C#, MSSQL, PostgreSQL, and full-stack web development with React/TypeScript. One of my standout projects was building a full Consent Management Platform for Jyllands-Posten/Politiken, where I handled the C# backend, MSSQL database, and parts of the React frontend.
