@@ -157,8 +157,10 @@ function Home() {
       <div className="about-snippet-section">
         <h2>Who I Am</h2>
         <p>
-          I'm a 26-year-old software developer currently pursuing a Bachelor's
-          in Software Development with a Game Development specialization.
+          I'm a 26-year-old software developer with a completed Bachelor's
+          in Software Development and a specialization in Game Development.
+          I'm now looking for my first full-time software development role,
+          where I can contribute, keep learning, and grow alongside a team.
           Professionally, I've built digital twin simulations and backend systems
           for industrial applications. Outside work, I'm passionate about game
           development, creating engaging mechanics, polish, and interactive
