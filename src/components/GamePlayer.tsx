@@ -1,4 +1,3 @@
-import React, { useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./styles/GamePlayer.css";
 import { Button } from "@/components/ui/button";
@@ -7,9 +6,7 @@ import { GAMES } from "./Games";
 function GamePlayer() {
   const { gameId } = useParams<{ gameId: string }>();
 
-  const game = useMemo(() => {
-    return GAMES.find((g) => g.id === gameId);
-  }, [gameId]);
+  const game = GAMES.find((entry) => entry.id === gameId);
 
   if (!game) {
     return (

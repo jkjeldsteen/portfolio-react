@@ -1,6 +1,6 @@
 import "../components/styles/Skills.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCloud, faTasks } from "@fortawesome/free-solid-svg-icons";
+import { faCloud } from "@fortawesome/free-solid-svg-icons";
 import javascriptIcon from "../resources/svg/javascript-svgrepo-com.svg";
 import typescriptIcon from "../resources/svg/typescript-icon-svgrepo-com.svg";
 import reactIcon from "../resources/svg/react-svgrepo-com.svg";
@@ -9,10 +9,8 @@ import sqlIcon from "../resources/svg/sql-svgrepo-com.svg";
 import postgresIcon from "../resources/svg/postgresql-svgrepo-com.svg";
 import csharpIcon from "../resources/svg/csharp-svgrepo-com.svg";
 import javaIcon from "../resources/svg/java-svgrepo-com.svg";
-import golangIcon from "../resources/svg/golang-svgrepo-com.svg";
 import Golang from "../resources/svg/Go-Logo_Aqua.svg";
 import gitIcon from "../resources/svg/git-svgrepo-com.svg";
-import agileIcon from "../resources/svg/scrum-svgrepo-com.svg";
 import stripeIcon from "../resources/svg/stripe-svgrepo-com.svg";
 import kubernetesIcon from "../resources/svg/kubernetes-svgrepo-com.svg";
 import unityIcon from "../resources/svg/unity-svgrepo-com.svg";

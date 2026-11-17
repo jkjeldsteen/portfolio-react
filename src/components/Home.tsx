@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import resumePdf from "../resources/resume.pdf";
 import gameplay from "../resources/images/GameplayScreenshot.png";
-import profilePhoto from "../resources/images/pfpMarch2026.jpg";
+import profilePhoto from "../resources/images/pfpMarch2026-576.jpg";
 
 function Home() {
   return (
@@ -33,7 +33,14 @@ function Home() {
             </div>
           </div>
 
-          <img src={profilePhoto} alt="Jakob Kjeldsteen" className="profile-photo" />
+          <img
+            src={profilePhoto}
+            alt="Jakob Kjeldsteen"
+            className="profile-photo"
+            width={576}
+            height={576}
+            {...{ fetchpriority: "high" }}
+          />
         </div>
       </div>
 
@@ -67,7 +74,14 @@ function Home() {
             <div className="featured-text">
               <h3>Epoch Raiders</h3>
               <p className="featured-type">Personal Game Development</p>
-              <img className="project-image" src={gameplay} alt="Epoch Raiders gameplay" loading="lazy" />
+              <img
+                className="project-image"
+                src={gameplay}
+                alt="Epoch Raiders gameplay"
+                width={1598}
+                height={890}
+                loading="lazy"
+              />
               <p className="featured-description">
                 A 2D top-down roguelike shooter with advanced enemy AI,
                 procedural level design, custom pixel art animation, and

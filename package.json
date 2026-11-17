@@ -24,7 +24,7 @@
     "react-router-dom": "^6.28.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.5.3",
+    "typescript": "^5.9.3",
     "vite": "^7.2.4",
     "web-vitals": "^2.1.4"
   },
@@ -33,6 +33,7 @@
     "eject": "react-scripts eject",
     "start": "vite --host",
     "build": "vite build",
+    "typecheck": "tsc -b",
     "serve": "vite preview"
   },
   "eslintConfig": {
