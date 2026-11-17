@@ -60,6 +60,25 @@ Create a production build:
 npm run build
 ```
 
+### SEO and hosting
+
+The production output is `dist/`. The build generates page-specific HTML metadata
+for all public routes and a `sitemap.xml` from `src/seo.ts`. That file is the source
+of truth for page titles, descriptions, canonical URLs, and the production domain.
+React updates the same metadata when visitors navigate within the app.
+
+Configure hosting to serve existing route files (for example,
+`/work/index.html`) before falling back to `/index.html` for client-side routes.
+This lets social crawlers receive the correct metadata without running JavaScript.
+The build also prerenders each route's React content, waiting for lazy components,
+so headings, text, and links are available without JavaScript. It checks that
+every route has a heading and that referenced production assets exist.
+Unknown routes receive `noindex` after JavaScript runs; configure HTTP 404 responses
+at the host for unknown URLs to avoid soft 404s.
+
+After deployment, check the live route metadata and submit
+`https://jkjeldsteen.com/sitemap.xml` in Google Search Console.
+
 ## Environment Variables
 
 This project requires EmailJS credentials for the contact form:

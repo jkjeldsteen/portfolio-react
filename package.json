@@ -32,7 +32,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start": "vite --host",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.mjs",
     "typecheck": "tsc -b",
     "serve": "vite preview"
   },

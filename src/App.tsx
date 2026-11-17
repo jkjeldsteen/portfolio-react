@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Link, Route, Routes, useLocation } from "react
 import { lazy, Suspense, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import Seo from "./components/Seo";
 const Work = lazy(() => import("./components/Work"));
 const Games = lazy(() => import("./components/Games"));
 const GamePlayer = lazy(() => import("./components/GamePlayer"));
@@ -20,9 +21,10 @@ function ScrollToTop() {
   return null;
 }
 
-function App() {
+export function AppContent() {
   return (
-    <Router>
+    <>
+      <Seo />
       <ScrollToTop />
       <Navbar />
       <Suspense fallback={<main className="about-wrapper" role="status">Loading page…</main>}>
@@ -45,8 +47,12 @@ function App() {
           } />
         </Routes>
       </Suspense>
-    </Router>
+    </>
   );
+}
+
+function App() {
+  return <Router><AppContent /></Router>;
 }
 
 export default App;

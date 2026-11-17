@@ -12,8 +12,9 @@ import { Button } from "@/components/ui/button";
 
 function Work() {
   return (
-    <div className="projects-wrapper">
+    <main className="projects-wrapper">
       <div className="main-content">
+        <h1>Software Projects &amp; Professional Work</h1>
         <div className="projects-container">
           <a
             href="https://www.marel.com"
@@ -290,7 +291,7 @@ function Work() {
           {/* Repeat the Card component for other cards */}
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 
