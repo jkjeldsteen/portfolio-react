@@ -1,79 +1,51 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "../components/styles/Home.css";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import resumePdf from "../resources/resume.pdf";
+import gameplay from "../resources/images/GameplayScreenshot.png";
 import profilePhoto from "../resources/images/pfpMarch2026.jpg";
 
 function Home() {
   return (
-    <div className="home-wrapper">
+    <main className="home-wrapper">
       <div className="home-content">
-        {/* Hero Section */}
         <div className="hero-section">
           <div className="hero-text">
             <h1 className="hero-title">Jakob Kjeldsteen</h1>
             <p className="hero-subtitle">
-              Full-Stack Developer & Game Enthusiast
+              Software Developer
             </p>
             <p className="hero-description">
-              Building digital simulations, developing games, and scalable backend systems.
+              I build backend services, industrial integrations, and simulations.
             </p>
 
-            {/* CTA Buttons */}
             <div className="cta-buttons">
-              <Link to="/work">
-                <Button variant="outline">View My Work</Button>
-              </Link>
-              <Link to="/contact">
-                <Button variant="outline">Get in Touch</Button>
-              </Link>
-              <a href={resumePdf} download="JakobKjeldsteen_Resume.pdf">
-                <Button variant="outline">Download Resume</Button>
-              </a>
+              <Button asChild>
+                <Link to="/work">View My Work</Link>
+              </Button>
+              <Button asChild variant="outline">
+                <a href={resumePdf} download="JakobKjeldsteen_Resume.pdf">Download Resume</a>
+              </Button>
+              <Button asChild variant="link">
+                <Link to="/contact">Get in Touch</Link>
+              </Button>
             </div>
           </div>
 
-          {/* Profile Photo */}
-          <div className="hero-photo-container">
-            <div className="photo-frame">
-              <img src={profilePhoto} alt="Jakob Kjeldsteen" className="profile-photo" />
-            </div>
-          </div>
+          <img src={profilePhoto} alt="Jakob Kjeldsteen" className="profile-photo" />
         </div>
       </div>
 
-      {/* Quick Stats Section */}
-      <div className="quick-stats-section">
-        <div className="stat-card">
-          <h3>1</h3>
-          <p>Year Professional Experience</p>
-        </div>
-        <a href="https://github.com/jkjeldsteen" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
-          <div className="stat-card stat-card-link">
-            <h3>7+</h3>
-            <p>Completed Projects</p>
-          </div>
-        </a>
-        <div className="stat-card">
-          <h3>Full-Stack</h3>
-          <p>Backend, Frontend & Game Dev</p>
-        </div>
-      </div>
-
-      {/* Featured Projects */}
       <div className="featured-section">
         <h2>Featured Projects</h2>
         <div className="featured-projects-grid">
-          <div className="featured-project">
+          <article className="featured-project">
             <div className="featured-text">
               <h3>Digital Twin & Simulation</h3>
               <p className="featured-type">Professional Development</p>
               <p className="featured-description">
-                Advanced simulation systems and digital twin technology developed at JBT Marel. 
-                Leveraging cutting-edge technologies to create virtual representations of 
-                physical systems for concept development, optimization and analysis.
+                At JBT Marel, I helped develop a Unity-based digital twin for a new machine and integrated the simulation with a Beckhoff PLC.
               </p>
               <div className="featured-tags">
                 <Badge>Unity</Badge>
@@ -83,18 +55,19 @@ function Home() {
                 <Badge>Simulation</Badge>
                 <Badge>Digital Twin</Badge>
               </div>
-              <div className="featured-buttons">
-                <Link to="/work">
-                  <Button variant="outline">Read More</Button>
-                </Link>
+              <div className="featured-buttons -ml-4">
+                <Button asChild variant="link">
+                  <Link to="/work">View Professional Work</Link>
+                </Button>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div className="featured-project">
+          <article className="featured-project">
             <div className="featured-text">
               <h3>Epoch Raiders</h3>
               <p className="featured-type">Personal Game Development</p>
+              <img className="project-image" src={gameplay} alt="Epoch Raiders gameplay" loading="lazy" />
               <p className="featured-description">
                 A 2D top-down roguelike shooter with advanced enemy AI,
                 procedural level design, custom pixel art animation, and
@@ -107,32 +80,31 @@ function Home() {
                 <Badge>Game Design</Badge>
                 <Badge>Pixel Art</Badge>
               </div>
-              <div className="featured-buttons">
-                <a href="https://jkjeldsteen.itch.io/epoch-raiders" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline">Play on Itch.io</Button>
-                </a>
-                <Link to="/devlogs">
-                  <Button variant="outline">Read Devlogs</Button>
-                </Link>
+              <div className="featured-buttons -ml-4">
+                <Button asChild variant="link">
+                  <a href="https://jkjeldsteen.itch.io/epoch-raiders" target="_blank" rel="noopener noreferrer">Play on Itch.io</a>
+                </Button>
+                <Button asChild variant="link">
+                  <Link to="/devlogs">Read Devlogs</Link>
+                </Button>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
 
-      {/* Tech Stack Preview */}
       <div className="tech-stack-section">
         <h2>Tech Stack</h2>
         <div className="tech-categories">
           <div className="tech-category">
-            <h4>Game Development</h4>
+            <h3>Game Development</h3>
             <div className="tech-badges">
               <Badge>C#</Badge>
               <Badge>Unity</Badge>
             </div>
           </div>
           <div className="tech-category">
-            <h4>Professional Development</h4>
+            <h3>Professional Development</h3>
             <div className="tech-badges">
               <Badge>React</Badge>
               <Badge>TypeScript</Badge>
@@ -142,7 +114,7 @@ function Home() {
             </div>
           </div>
           <div className="tech-category">
-            <h4>Databases & DevOps</h4>
+            <h3>Databases & DevOps</h3>
             <div className="tech-badges">
               <Badge>PostgreSQL</Badge>
               <Badge>MSSQL</Badge>
@@ -153,59 +125,27 @@ function Home() {
         </div>
       </div>
 
-      {/* About Snippet */}
       <div className="about-snippet-section">
         <h2>Who I Am</h2>
         <p>
-          I'm a 26-year-old software developer with a completed Bachelor's
-          in Software Development and a specialization in Game Development.
-          I'm now looking for my first full-time software development role,
-          where I can contribute, keep learning, and grow alongside a team.
-          Professionally, I've built digital twin simulations and backend systems
-          for industrial applications. Outside work, I'm passionate about game
-          development, creating engaging mechanics, polish, and interactive
-          experiences. I thrive on solving complex technical challenges while
-          maintaining creative vision.
+          I work across backend development and industrial software, from payment and recommendation services to factory simulations. Outside work, I build 2D and 3D games in Unity with C#.
         </p>
         <Link to="/about" className="learn-more-link">
           Learn more about me →
         </Link>
       </div>
 
-      {/* Final CTA */}
       <div className="final-cta-section">
         <h2>Let's Build Something Together</h2>
         <p>
           Have a project in mind? Want to collaborate? I'm always interested
           in discussing innovative ideas, game mechanics, or technical challenges.
         </p>
-        <Link to="/contact">
-          <Button variant="default" className="large-button">
-            Send Me a Message
-          </Button>
-        </Link>
+        <Button asChild variant="outline">
+          <Link to="/contact">Send Me a Message</Link>
+        </Button>
       </div>
-
-      {/* Photo Credit Footer */}
-      <footer className="photo-credit">
-        Photo by{" "}
-        <a
-          href="https://unsplash.com/@anasalshanti?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Anas Alshanti
-        </a>{" "}
-        on{" "}
-        <a
-          href="https://unsplash.com/photos/focus-photography-of-computer-keyboard-with-red-lights-feXpdV001o4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Unsplash
-        </a>
-      </footer>
-    </div>
+    </main>
   );
 }
 

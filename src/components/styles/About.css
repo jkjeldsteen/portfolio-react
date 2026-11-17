@@ -1,80 +1,23 @@
-.about-wrapper {
-    font-family: var(--font-family);
-    margin: 0;
-    padding: var(--space-lg);
-    background-color: var(--color-bg-base);
-    color: var(--color-text-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    box-sizing: border-box;
-}
-
 .about-content {
-    width: 80%;
-    max-width: 800px;
-    overflow: auto;
-    padding: var(--space-lg);
-    color: var(--color-text-primary);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    box-sizing: border-box;
-}
-
-.about-content h1 {
-    font-size: var(--font-size-h2);
-    margin-bottom: var(--space-lg);
-    padding-left: var(--space-lg);
-    box-sizing: border-box;
-    color: var(--color-text-primary);
-    border-bottom: 1px solid var(--color-primary-accent);
-    padding-bottom: var(--space-md);
+  max-width: 68ch;
+  margin-inline: auto;
 }
 
 .about-content p {
-    font-size: var(--font-size-body);
-    margin-bottom: var(--space-md);
-    padding-left: var(--space-lg);
-    box-sizing: border-box;
-    color: var(--color-text-secondary);
-    line-height: var(--line-height);
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+}
+
+.about-content p + p {
+  margin-top: 1rem;
 }
 
 .about-content a {
-    color: var(--color-primary-accent);
-    text-decoration: none;
-    transition: opacity 0.3s ease;
+  color: var(--page-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .about-content a:hover {
-    opacity: 0.8;
-    text-decoration: underline;
-}
-
-@media screen and (max-width: 1024px) {
-    .about-content {
-        width: 90%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .about-content {
-        width: 75%;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .about-content {
-        height: auto;
-        width: 100%;
-        padding: var(--space-md);
-    }
-
-    .about-content p {
-        font-size: var(--font-size-body);
-        padding-left: var(--space-md);
-    }
+  color: var(--color-text-primary);
 }

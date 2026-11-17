@@ -10,7 +10,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 
 export interface GameData {
   id: string;
@@ -83,7 +82,11 @@ function Games() {
                 key={game.id}
                 to={`/games/play/${game.id}`}
                 className="game-card-link"
-                onMouseEnter={() => game.previewGif && setHoveredGameId(game.id)}
+                onMouseEnter={() => {
+                  if (game.previewGif && window.matchMedia("(hover: hover) and (prefers-reduced-motion: no-preference)").matches) {
+                    setHoveredGameId(game.id);
+                  }
+                }}
                 onMouseLeave={() => setHoveredGameId(null)}
               >
                 <Card className="game-card bg-transparent text-white shadow-lg rounded-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow">
@@ -93,7 +96,9 @@ function Games() {
                       alt={game.title}
                       className="game-preview-image"
                       onError={(e) => {
-                        e.currentTarget.src = game.previewImage;
+                        if (e.currentTarget.getAttribute("src") !== game.previewImage) {
+                          setHoveredGameId(null);
+                        }
                       }}
                     />
                   </div>
@@ -113,12 +118,7 @@ function Games() {
                         </Badge>
                       ))}
                     </div>
-                    <Button
-                      variant="outline"
-                      className="whitespace-nowrap"
-                    >
-                      Play Now
-                    </Button>
+                    <span className="game-play-label">Play Now</span>
                   </CardFooter>
                 </Card>
               </Link>

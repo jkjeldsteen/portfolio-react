@@ -1,162 +1,54 @@
-.skills-wrapper {
-    background-color: var(--color-bg-base);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    font-family: var(--font-family);
-    min-height: 100vh;
-    box-sizing: border-box;
-    overflow-y: hidden;
-}
-
 .skills-container {
-    text-align: center;
-    max-width: 800px;
+  max-width: 48rem;
+  margin-inline: auto;
 }
 
-.skills-container h1 {
-    color: var(--color-text-primary);
-    margin-top: var(--space-2xl);
-    margin-bottom: var(--space-lg);
-    font-size: var(--font-size-h2);
-    border: 1px solid var(--color-primary-accent);
-    border-radius: var(--radius-md);
-    padding: var(--space-sm) var(--space-xl);
-    display: inline-block;
+.skills-container :is(.featured-skills, .skills-category) {
+  border-top: 1px solid var(--page-rule);
+  padding-block: 1.5rem;
 }
 
-.skills-category {
-    margin-bottom: var(--space-xl);
+.skills-container h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
 }
 
-.featured-skills {
-    background: linear-gradient(135deg, rgba(49, 235, 173, 0.1) 0%, rgba(49, 235, 173, 0.05) 100%);
-    border: 1px solid var(--color-primary-accent);
-    border-radius: var(--radius-md);
-    padding: var(--space-lg);
-    margin-bottom: var(--space-2xl);
-    box-shadow: var(--shadow-accent);
+.skills-container ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 7rem), 1fr));
+  gap: 1.25rem 0.75rem;
 }
 
-.featured-skills h2 {
-    color: var(--color-primary-accent);
-    text-align: center;
-    font-size: var(--font-size-h3);
-    margin-bottom: var(--space-lg);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
+.skills-container li {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
 }
 
-.featured-skills ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-lg);
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.skills-container li :is(img, svg) {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
 }
 
-.featured-skills ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.featured-skills li img {
+  width: 2.75rem;
+  height: 2.75rem;
 }
 
-.featured-icon {
-    width: 80px !important;
-    height: 80px !important;
+.featured-skills li span {
+  color: var(--page-accent);
 }
 
-.featured-skills ul li span {
-    color: var(--color-primary-accent);
-    margin-top: var(--space-md);
-    font-size: var(--font-size-h4);
-    font-weight: bold;
+.skills-container .blackIcon {
+  color: var(--page-accent);
 }
 
-.skills-category h2 {
-    color: var(--color-text-primary);
-    text-align: left;
-    font-size: var(--font-size-h3);
-    margin-bottom: var(--space-md);
-    border-bottom: 1px solid var(--color-primary-accent);
-    padding-bottom: var(--space-sm);
-}
-
-.skills-category ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-lg);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.skills-category ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.skills-category ul li .icon {
-    width: 50px;
-    height: 50px;
-}
-
-.skills-category ul li .blackIcon {
-    width: 50px;
-    height: 50px;
-    color: var(--color-primary-accent);
-}
-
-.skills-category ul li .dockerIcon {
-    width: 50px;
-    height: 50px;
-    color: #2496ED;
-}
-
-.skills-category ul li .icon svg {
-    margin-bottom: var(--space-xs);
-}
-
-.skills-category ul li span {
-    color: var(--color-text-secondary);
-    margin-top: var(--space-sm);
-    font-size: var(--font-size-small);
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.skills-category ul li:hover span {
-    color: var(--color-primary-accent);
-}
-
-@media screen and (max-width: 1440px) {
-}
-
-@media screen and (max-width: 425px) {
-    .skills-wrapper {
-        overflow-y: auto;
-    }
-
-    .skills-category ul {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .featured-skills ul {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .featured-icon {
-        width: 60px !important;
-        height: 60px !important;
-    }
-
-    .skills-category h2 {
-        font-size: var(--font-size-h4);
-    }
+.skills-container .dockerIcon {
+  color: #71b7e5;
 }

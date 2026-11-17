@@ -1,117 +1,87 @@
-import {
-  Route,
-  Link,
-  Routes,
-  useParams,
-  useNavigate,
-  useLocation,
-} from "react-router-dom";
-import { useEffect } from "react";
+import { Link, Route, Routes, useParams } from "react-router-dom";
 import Devlog0 from "./Devlogs/Devlog0";
 import Devlog1 from "./Devlogs/Devlog1";
 import Devlog2 from "./Devlogs/Devlog2";
-import "../components/styles/Devlog.css";
+import caveman from "../resources/images/MeleeCaveman.png";
+import mammoth from "../resources/images/GiantMammoth.png";
+import gameplay from "../resources/images/GameplayScreenshot.png";
+import "./styles/Devlog.css";
 
 const devlogs = [
-  {
-    id: 0,
-    title: "Devlog #0 - Getting Started",
-    component: <Devlog0 />,
-  },
-  {
-    id: 1,
-    title: "Devlog #1 - Working on Level 1: The Ice Age",
-    component: <Devlog1 />,
-  },
-  {
-    id: 2,
-    title: "Devlog #2 - Polishing the game feel and talking art strategy",
-    component: <Devlog2 />,
-  },
-  // Add more devlogs here as needed
+  { id: 0, title: "Getting Started", art: caveman, component: <Devlog0 /> },
+  { id: 1, title: "Working on Level 1: The Ice Age", art: mammoth, component: <Devlog1 /> },
+  { id: 2, title: "Polishing the game feel and talking art strategy", art: gameplay, component: <Devlog2 /> },
 ];
 
-const Devlog = () => {
+function Devlog() {
   return (
-    <div className="devlog-wrapper">
-      <h1 className="devlog-title">Epoch Raiders Devlogs</h1>
+    <main className="devlog-wrapper">
       <Routes>
-        <Route path="/" element={<DevlogList />} />
+        <Route index element={<DevlogList />} />
         <Route path=":devlogId" element={<DevlogDetail />} />
       </Routes>
-    </div>
+    </main>
   );
-};
+}
 
-const DevlogList = () => {
+function DevlogList() {
   return (
-    <div>
-      <h2 className="devlog-subtitle">Select a Devlog</h2>
-      <ul className="devlog-list">
-        {devlogs.map((devlog) => (
-          <li key={devlog.id}>
-            <Link to={`/devlogs/${devlog.id}`}>{devlog.title}</Link>
+    <>
+      <header className="journal-header">
+        <h1>Epoch Raiders Devlogs</h1>
+        <p>Follow the development of Epoch Raiders, from its first enemies to the Ice Age level.</p>
+      </header>
+      <ul className="journal-chapters">
+        {[...devlogs].reverse().map((entry) => (
+          <li key={entry.id}>
+            <Link to={String(entry.id)} className="journal-chapter">
+              <div className="journal-art" data-gameplay={entry.id === 2}>
+                <img src={entry.art} alt="" />
+              </div>
+              <div className="journal-label">
+                <span>Devlog #{entry.id}</span>
+                <h2>{entry.title}</h2>
+              </div>
+            </Link>
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
-};
+}
 
-const DevlogDetail = () => {
-  const { devlogId } = useParams<{ devlogId: string }>();
-  const devlogIndex = Number(devlogId);
-  const devlog = devlogs.find((d) => d.id === devlogIndex);
-  const location = useLocation();
-
-  // Scroll to top with smooth behavior when the component is rendered
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Smooth scroll behavior
-    });
-  }, [location]); // Dependency on location
+function DevlogDetail() {
+  const { devlogId } = useParams();
+  const index = devlogs.findIndex(({ id }) => String(id) === devlogId);
+  const entry = devlogs[index];
+  const previous = devlogs[index - 1];
+  const next = devlogs[index + 1];
 
   return (
     <div className="devlog-detail">
-      {devlog ? (
-        <>
-          {devlog.component}
-          <div className="pagination-wrapper">
-            <div className="pagination">
-              {devlogIndex > 0 && (
-                <div className="previous-button">
-                  <Link to={`/devlogs/${devlogIndex - 1}`}>
-                    Previous Devlog
-                  </Link>
-                </div>
-              )}
-              {devlogIndex < devlogs.length - 1 && (
-                <div className="next-button">
-                  <Link to={`/devlogs/${devlogIndex + 1}`}>Next Devlog</Link>
-                </div>
-              )}
-              {/* If there's only one button, center it */}
-              {devlogIndex === 0 && devlogs.length === 1 && (
-                <div className="single-button">
-                  <Link to={`/devlogs/${devlogIndex + 1}`}>Next Devlog</Link>
-                </div>
-              )}
-              {devlogIndex === devlogs.length - 1 && devlogs.length === 1 && (
-                <div className="single-button">
-                  <Link to={`/devlogs/${devlogIndex - 1}`}>
-                    Previous Devlog
-                  </Link>
-                </div>
-              )}
+      <Link to="/devlogs" className="journal-back">All Epoch Raiders devlogs</Link>
+      {entry ? (
+        <article>
+          <header className="journal-entry-header">
+            <div className="journal-label">
+              <span>Devlog #{entry.id}</span>
+              <h1>{entry.title}</h1>
             </div>
-          </div>
-        </>
+            <div className="journal-art" data-gameplay={entry.id === 2}>
+              <img src={entry.art} alt="" />
+            </div>
+          </header>
+          {entry.component}
+          <nav className="pagination" aria-label="Devlog navigation">
+            {previous && <Link to={`/devlogs/${previous.id}`}>Previous devlog</Link>}
+            {next && <Link to={`/devlogs/${next.id}`}>Next devlog</Link>}
+          </nav>
+        </article>
       ) : (
-        <p>Devlog not found</p>
+        <h1>Devlog not found</h1>
       )}
     </div>
   );
-};
+}
 
 export default Devlog;

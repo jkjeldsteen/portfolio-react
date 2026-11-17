@@ -1,4 +1,3 @@
-import React from "react";
 import "./styles/Work.css";
 import {
   Card,
@@ -25,14 +24,14 @@ function Work() {
             <Card className="card bg-transparent text-white shadow-lg rounded-lg overflow-hidden flex flex-col">
               <CardHeader>
                 <CardTitle className="text-xl font-bold">
-                  JBT Marel - Student Developer & Intern - Want to learn more? Click me
+                  JBT Marel
                 </CardTitle>
                 <CardDescription className="text-sm mt-2">
-                  Student Developer & Intern
+                  Software Developer · Støvring
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                As a student developer and intern at JBT Marel, I developed an internal ordering system to modernize and streamline workflows in the development department. I created and supported a Unity-based simulation and Digital Twin for developing a new machine, implementing integration between the Unity simulation and Beckhoff PLC systems. I participated in concept development, technical decision-making processes, and was responsible for aspects of software architecture and stakeholder coordination.
+                I develop an internal ordering system to streamline workflows in the development department. I also helped build and support a Unity-based digital twin for a new machine, integrating the simulation with a Beckhoff PLC. My work includes concept development, software architecture, and coordination with stakeholders.
               </CardContent>
               <CardFooter className="flex flex-wrap items-center space-x-1 md:space-x-2 mb-2 md:mb-0 mt-auto">
                 <div className="flex items-center space-x-1">
@@ -43,7 +42,7 @@ function Work() {
                 </div>
                 <div>
                   <span className="whitespace-nowrap">
-                    February 1st, 2025 - June 30th, 2026
+                    2025–present
                   </span>
                 </div>
               </CardFooter>
@@ -55,11 +54,11 @@ function Work() {
                 Game development
               </CardTitle>
               <CardDescription className="text-sm mt-2">
-                Sparetime
+                Personal projects
               </CardDescription>
             </CardHeader>
             <CardContent>
-              I develop games in my spare time using Unity and C#. I've created reimagined versions of classic games including Asteroids, Geometry Dash, and Doodle Jump, exploring different game mechanics and design patterns. My primary focus is Epoch Raiders, a 2D top-down shooter with roguelike elements that showcases advanced game mechanics, enemy AI, procedural level design, and pixel art animation. This is my most ambitious project, combining technical implementation with creative vision.
+              I build 2D and 3D games with Unity and C#. In Epoch Raiders, a top-down roguelike shooter, I work on enemy AI, procedural level design, and pixel art animation.
             </CardContent>
             <CardFooter className="flex flex-wrap items-center space-x-1 md:space-x-2 mb-2 md:mb-0 mt-auto">
               <div className="flex items-center space-x-1">
@@ -89,22 +88,18 @@ function Work() {
             <Card className="card bg-transparent text-white shadow-lg rounded-lg overflow-hidden flex flex-col">
               <CardHeader>
                 <CardTitle className="text-xl font-bold">
-                  Black Capital Technology - Want to learn more? Click me
+                  Black Capital Technology
                 </CardTitle>
                 <CardDescription className="text-sm mt-2">
-                  Backend Developer Intern
+                  Backend Developer · Aalborg
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                As part of my search for a job, I went into an internship with
-                Black Capital Technology as a backend developer on some internal
-                projects. I gained experience as a backend developer using the
-                Go programming language. I was also introduced to working in a
-                small team combined of remote and on-site workers.
+                I developed and maintained Go services for Heads, integrated Stripe payments, and built features for specialist and treatment recommendations and user notifications. I also helped troubleshoot and stabilize the backend.
               </CardContent>
               <CardFooter className="flex flex-wrap items-center space-x-1 md:space-x-2 mb-2 md:mb-0 mt-auto">
                 <div className="flex items-center space-x-1">
-                  <Badge className="whitespace-nowrap">GoLang</Badge>
+                  <Badge className="whitespace-nowrap">Go</Badge>
                   <Badge className="whitespace-nowrap">Stripe</Badge>
                 </div>
                 <div>
@@ -122,28 +117,21 @@ function Work() {
             <Card className="card bg-transparent text-white shadow-lg rounded-lg overflow-hidden flex flex-col">
               <CardHeader>
                 <CardTitle className="text-xl font-bold">
-                  Full-stack Developer Intern at NordicScreen - Want to learn
-                  more? Click me
+                  NordicScreen
                 </CardTitle>
                 <CardDescription className="text-sm mt-2">
-                  Full-stack Developer Intern
+                  Full-stack Developer · Randers
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                During my computer science education, I completed a 10-week
-                company internship at NordicScreen in Randers, where I gained
-                valuable experience as a full-stack developer. I worked on
-                various tasks and programming languages, including JavaScript,
-                TypeScript, React, and PHP. Additionally, I participated in the
-                development of an app designed for Samsung TV based on Tizen
-                6.5.
+                I worked on production frontend and backend features using JavaScript, TypeScript, React, and PHP, and helped develop a Samsung TV app on Tizen 6.5.
               </CardContent>
               <CardFooter className="flex flex-wrap items-center space-x-1 md:space-x-2 mb-2 md:mb-0 mt-auto">
                 <div className="flex items-center space-x-1">
                   <Badge className="whitespace-nowrap">PHP</Badge>
                   <Badge className="whitespace-nowrap">React</Badge>
                   <Badge className="whitespace-nowrap">
-                    Typescript
+                    TypeScript
                   </Badge>
                   <Badge className="whitespace-nowrap">
                     Tizen 6.5
@@ -166,21 +154,14 @@ function Work() {
             <Card className="card bg-transparent text-white shadow-lg rounded-lg overflow-hidden flex flex-col">
               <CardHeader>
                 <CardTitle className="text-xl font-bold">
-                  POC Consent Management Platform for JP/Politiken - Want to
-                  learn more? Click me!
+                  JP / Politiken Consent Management Platform
                 </CardTitle>
                 <CardDescription className="text-sm mt-2">
-                  5th and final semester project Computer Science AP
+                  Full-stack development · Final AP degree project
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                I, along with two fellow students, collaborated with
-                JP/Politiken to develop a Proof of Concept for an internally
-                owned Consent Management Platform. The system should be able to
-                handle the scanning of cookies on a domain and store this
-                information in a database. Additionally, it should have an admin
-                dashboard to manage cookies on various domains and an
-                informative popup for visiting users on JP's domains.
+                Two fellow students and I built a proof of concept for an internal consent management platform. It scanned domains for cookies, stored the results in SQL, and provided an admin dashboard and a cookie notice. The project helped JP / Politiken assess the value of building its own platform.
               </CardContent>
               <CardFooter className="flex flex-wrap items-center space-x-1 md:space-x-2 mb-2 md:mb-0 mt-auto">
                 <div className="flex items-center space-x-1">
@@ -188,7 +169,7 @@ function Work() {
                   <Badge className="whitespace-nowrap">SQL</Badge>
                   <Badge className="whitespace-nowrap">React</Badge>
                   <Badge className="whitespace-nowrap">
-                    Typescript
+                    TypeScript
                   </Badge>
                 </div>
                 <div>
@@ -206,28 +187,20 @@ function Work() {
             <Card className="card bg-transparent text-white shadow-lg rounded-lg overflow-hidden flex flex-col">
               <CardHeader>
                 <CardTitle className="text-xl font-bold">
-                  POC Dashboard Tool for Xtellio - Want to learn more? Click me
+                  Xtellio IoT Dashboard
                 </CardTitle>
                 <CardDescription className="text-sm mt-2">
-                  4th semester project Computer Science AP
+                  Full-stack development · AP degree project
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                In the fourth semester of my computer science education, we
-                collaborated with a local company to develop a dashboard for
-                managing and visualizing data from a large pool of various IoT
-                devices. We selected a range of key figures in collaboration
-                with Xtellio, and these figures were then visualized in various
-                graphs for better understanding of one's device pool. The
-                front-end was developed in Vue.js, and using a JavaScript API,
-                we could fetch data from Xtellio's backend and modify it before
-                sending it to the front-end.
+                We worked with Xtellio to select device metrics and visualize them in a Vue.js dashboard. A JavaScript API fetched and transformed IoT data from Xtellio’s backend.
               </CardContent>
               <CardFooter className="flex flex-wrap items-center space-x-1 md:space-x-2 mb-2 md:mb-0 mt-auto">
                 <div className="flex items-center space-x-1">
                   <Badge className="whitespace-nowrap">Vue.js</Badge>
                   <Badge className="whitespace-nowrap">
-                    Javascript
+                    JavaScript
                   </Badge>
                 </div>
                 <div>

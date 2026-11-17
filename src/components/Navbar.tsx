@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom"; // Import NavLink instead of Link
 import "../components/styles/Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,25 +11,43 @@ import {
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNav = () => {
-    setIsOpen(!isOpen);
-  };
+  const menuButton = useRef<HTMLButtonElement>(null);
+  const closeNav = () => setIsOpen(false);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+        menuButton.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [isOpen]);
 
   return (
     <div>
       {/* Toggle button for small screens */}
-      <div className="toggle-btn" onClick={toggleNav}>
-        {isOpen ? "✕" : "☰"}
-      </div>
+      <button
+        ref={menuButton}
+        type="button"
+        className="toggle-btn"
+        aria-controls="site-navigation"
+        aria-expanded={isOpen}
+        onClick={() => setIsOpen((open) => !open)}
+      >
+        {isOpen ? "Close" : "Menu"}
+      </button>
 
       {/* Sidebar navigation */}
-      <div className={`sidenav ${isOpen ? "open" : ""}`}>
+      <nav id="site-navigation" aria-label="Main navigation" className={`sidenav ${isOpen ? "open" : ""}`}>
         <ul>
           {/* Use NavLink with className for active styling */}
           <li>
             <NavLink
               to="/"
-              onClick={toggleNav}
+              onClick={closeNav}
               className={({ isActive }) => (isActive ? "active" : undefined)}
             >
               Home
@@ -38,7 +56,7 @@ function Navbar() {
           <li>
             <NavLink
               to="/work"
-              onClick={toggleNav}
+              onClick={closeNav}
               className={({ isActive }) => (isActive ? "active" : undefined)}
             >
               Work
@@ -47,7 +65,7 @@ function Navbar() {
           <li>
             <NavLink
               to="/games"
-              onClick={toggleNav}
+              onClick={closeNav}
               className={({ isActive }) => (isActive ? "active" : undefined)}
             >
               Games
@@ -56,7 +74,7 @@ function Navbar() {
           <li>
             <NavLink
               to="/devlogs"
-              onClick={toggleNav}
+              onClick={closeNav}
               className={({ isActive }) => (isActive ? "active" : undefined)}
             >
               Epoch Raiders
@@ -65,7 +83,7 @@ function Navbar() {
           <li>
             <NavLink
               to="/about"
-              onClick={toggleNav}
+              onClick={closeNav}
               className={({ isActive }) => (isActive ? "active" : undefined)}
             >
               About
@@ -74,7 +92,7 @@ function Navbar() {
           <li>
             <NavLink
               to="/skills"
-              onClick={toggleNav}
+              onClick={closeNav}
               className={({ isActive }) => (isActive ? "active" : undefined)}
             >
               Skills
@@ -83,7 +101,7 @@ function Navbar() {
           <li>
             <NavLink
               to="/contact"
-              onClick={toggleNav}
+              onClick={closeNav}
               className={({ isActive }) => (isActive ? "active" : undefined)}
             >
               Contact
@@ -92,28 +110,28 @@ function Navbar() {
         </ul>
         <div className="social-icons">
           <a
-            href="https://github.com/jkjeldsteen"
+            aria-label="GitHub" href="https://github.com/jkjeldsteen"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faGithub} />
           </a>
           <a
-            href="https://www.linkedin.com/in/jkjeldsteen/"
+            aria-label="LinkedIn" href="https://www.linkedin.com/in/jkjeldsteen/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
           <a
-            href="https://jkjeldsteen.itch.io"
+            aria-label="Itch.io" href="https://jkjeldsteen.itch.io"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faItchIo} />
           </a>
         </div>
-      </div>
+      </nav>
     </div>
   );
 }

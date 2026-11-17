@@ -1,5 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@400;600&display=swap');
+
+:root {
+  --portfolio-mint: #8ce6bf;
+  --portfolio-ink: #10251d;
+}
+
+::selection {
+  background: var(--portfolio-mint);
+  color: var(--portfolio-ink);
+}
+
 body {
   margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -7,4 +22,53 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Interior routes share the same reading edge and clear the fixed navigation. */
+:is(.projects-wrapper, .games-wrapper, .about-wrapper, .skills-wrapper, .contact-wrapper, :where(#root > .devlog-wrapper), .game-player-wrapper) {
+  --page-gutter: clamp(1rem, 4vw, 3rem);
+  --page-top: clamp(2.5rem, 6vw, 5rem);
+  --page-accent: var(--portfolio-mint);
+  --page-rule: #3a4941;
+  margin-inline-start: 10%;
+  min-width: 0;
+}
+
+:is(.projects-wrapper, .games-wrapper, .about-wrapper, .skills-wrapper, .contact-wrapper, :where(#root > .devlog-wrapper)) {
+  min-height: 100svh;
+  padding: var(--page-top) var(--page-gutter);
+}
+
+:is(.projects-wrapper, .games-wrapper, .about-wrapper, .skills-wrapper, .contact-wrapper, :where(#root > .devlog-wrapper)) h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 600;
+  color: var(--portfolio-mint);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+  margin: 0 0 1.5rem;
+}
+
+:is(.projects-wrapper, .games-wrapper, .about-wrapper, .skills-wrapper, .contact-wrapper, :where(#root > .devlog-wrapper), .game-player-wrapper) :focus-visible {
+  outline: 2px solid var(--page-accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 858px) {
+  :is(.projects-wrapper, .games-wrapper, .about-wrapper, .skills-wrapper, .contact-wrapper, :where(#root > .devlog-wrapper), .game-player-wrapper) {
+    --page-top: 5rem;
+    margin-inline-start: 0;
+  }
+}
+
+.hero-title,
+.journal-label h2,
+.journal-entry-header h1 {
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 640px) and (max-width: 760px) {
+  .hero-section {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }

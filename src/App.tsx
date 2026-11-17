@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -34,6 +34,14 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={
+          <main className="about-wrapper">
+            <div className="about-content">
+              <h1>Page not found</h1>
+              <p><Link to="/">Return to the portfolio home</Link></p>
+            </div>
+          </main>
+        } />
       </Routes>
     </Router>
   );

@@ -1,182 +1,262 @@
-@import url('https://fonts.googleapis.com/css2?family=Georama:wght@400;600&display=swap');
-
-body {
-  font-family: var(--font-family);
-  background-color: var(--color-bg-base);
-  color: var(--color-text-primary);
-  margin: 0;
-  padding: 0;
-}
-
-.devlog-wrapper {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: var(--space-xl);
-  background-color: var(--color-bg-surface);
-  box-shadow: var(--shadow-md);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
-}
-
-/* Style the devlog list title */
-.devlog-subtitle {
-  font-size: var(--font-size-h3);
-  font-weight: bold;
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-lg);
-}
-
-/* Style the devlog list */
-.devlog-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-  width: 100%;
-  text-align: left;
-}
-
-/* Style each devlog link */
-.devlog-list li {
-  text-align: left;
-}
-
-.devlog-list a {
-  color: var(--color-primary-accent);
-  font-size: var(--font-size-h4);
-  font-weight: bold;
-  text-decoration: none;
-  padding: var(--space-sm) var(--space-md);
-  border-radius: var(--radius-md);
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.devlog-list a:hover {
-  background-color: rgba(49, 235, 173, 0.1);
-  text-decoration: none;
-}
-
-.devlog-content {
-  padding: var(--space-md);
-}
-
-.devlog-title {
-  font-size: var(--font-size-h1);
-  color: var(--color-text-primary);
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: var(--space-2xl);
-  border-bottom: 1px solid var(--color-primary-accent);
-  padding-bottom: var(--space-lg);
-}
-
-.devlog-entry {
-  margin-bottom: var(--space-2xl);
+#root > .devlog-wrapper > * {
+  max-width: 43rem;
+  margin-inline: auto;
 }
 
 .devlog-section-title {
-  font-size: var(--font-size-h3);
+  font-size: 1.25rem;
   font-weight: 600;
-  color: var(--color-primary-accent);
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-md);
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
 }
 
-.devlog-text {
-  font-size: var(--font-size-body);
-  line-height: var(--line-height);
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-md);
+.devlog-section-title {
+  margin-top: 2rem;
 }
 
-.devlog-list {
-  list-style-type: disc;
-  margin-left: var(--space-xl);
+.devlog-wrapper a {
+  color: var(--page-accent);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.25em;
+}
+
+.devlog-wrapper a:hover {
+  text-decoration-color: currentColor;
+}
+
+.devlog-text,
+.devlog-content .devlog-list,
+.devlog-entry .devlog-list {
   color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+:is(.devlog-content, .devlog-entry) .devlog-list {
+  list-style: disc;
+  padding-inline-start: 1.5rem;
 }
 
 .devlog-list .tabbed {
-  padding-left: var(--space-lg);
+  padding-inline-start: 0.75rem;
 }
 
 .devlog-footer {
-  font-size: var(--font-size-small);
-  font-style: italic;
-  margin-top: var(--space-xl);
-  color: var(--color-text-tertiary);
+  color: var(--color-text-secondary);
+  margin-top: 2rem;
 }
 
 .devlog-signature {
-  font-size: var(--font-size-h4);
   font-weight: 600;
-  color: var(--color-text-primary);
-  margin-top: var(--space-lg);
-  text-align: right;
+  margin-top: 0.75rem;
 }
 
 .enemy-image {
-    display: block;
-    margin: var(--space-md) auto;
-    max-width: 80%;
-    height: auto;
-    border-radius: var(--radius-md);
-}
-
-.pagination-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: var(--space-xl);
-  padding-top: var(--space-xl);
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.25rem auto;
+  border-radius: var(--radius-md);
 }
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  margin-top: var(--space-xl);
-  width: 100%;
-  gap: var(--space-lg);
+  gap: 0.5rem 1.25rem;
+  border-top: 1px solid var(--page-rule);
+  margin-top: 2rem;
+  padding-top: 0.5rem;
 }
 
 .pagination a {
-  color: var(--color-primary-accent);
-  font-size: var(--font-size-h4);
-  font-weight: 600;
-  text-decoration: none;
-  padding: var(--space-sm) var(--space-md);
-  border-radius: var(--radius-md);
-  transition: all 0.3s ease;
-}
-
-.pagination a:hover {
-  background-color: rgba(49, 235, 173, 0.1);
-  text-decoration: none;
-}
-
-.pagination a:active {
-  color: var(--color-text-primary);
-}
-
-.pagination a:disabled,
-.pagination a[aria-disabled="true"] {
-    color: var(--color-text-tertiary);
-    pointer-events: none;
-    background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 
 .animation-gifs {
   display: flex;
-  justify-content: center;
-  gap: var(--space-md);
-  margin-top: var(--space-md);
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-block: 1rem;
 }
 
 .devlog-gif {
-  width: 150px;
+  width: min(150px, 100%);
   height: auto;
+}
+
+/* Ice Age journal. Keep the article measure even when the art runs wide. */
+#root > .devlog-wrapper {
+  --page-accent: #b1e9ff;
+  --page-rule: #38515d;
+  background: #111c23;
+}
+
+#root > .devlog-wrapper > :is(.journal-header, .journal-chapters, .devlog-detail) {
+  max-width: 72rem;
+}
+
+.journal-header {
+  margin-bottom: clamp(1.75rem, 4vw, 3rem);
+}
+
+.devlog-wrapper :is(.journal-header, .journal-entry-header) h1 {
+  margin: 0;
+  color: var(--page-accent);
+}
+
+.journal-header p {
+  max-width: 55ch;
+  margin-top: 1rem;
+  color: #b7cdd7;
+}
+
+.journal-chapters {
+  display: grid;
+  gap: 1rem;
+}
+
+.journal-chapter,
+.journal-entry-header {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--page-rule);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
+  background: #192a35;
+}
+
+.journal-art {
+  display: grid;
+  place-items: center;
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  overflow: hidden;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  background: #233a48;
+}
+
+.journal-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  padding: 1.5rem;
+}
+
+.journal-art[data-gameplay="true"] img {
+  object-fit: cover;
+  image-rendering: auto;
+  padding: 0;
+}
+
+.journal-label {
+  align-self: center;
+  padding: clamp(1rem, 3vw, 2.5rem);
+}
+
+.journal-label span {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--page-accent);
+  font-size: 0.875rem;
+}
+
+.journal-label h2 {
+  color: #f1faff;
+  font-size: clamp(1.35rem, 3vw, 2.35rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.devlog-wrapper .journal-chapter:hover {
+  text-decoration: none;
+}
+
+.journal-chapter:is(:hover, :focus-visible) {
+  border-color: var(--page-accent);
+  background: #203846;
+}
+
+.journal-back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: 1rem;
+}
+
+.devlog-wrapper .journal-back {
+  text-decoration-color: currentColor;
+}
+
+.journal-entry-header {
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.devlog-wrapper .journal-entry-header h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.devlog-detail article > :is(.devlog-wrapper, .pagination) {
+  max-width: 70ch;
+  margin-inline: auto;
+}
+
+.devlog-detail :is(.devlog-text, .devlog-list, .devlog-footer) {
+  color: #c1d2da;
+}
+
+.devlog-detail .devlog-section-title {
+  color: var(--page-accent);
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+}
+
+@media (min-width: 680px) {
+  .journal-chapters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .journal-chapters > :first-child {
+    grid-column: 1 / -1;
+  }
+
+  .journal-chapters > li:not(:first-child) {
+    display: grid;
+  }
+
+  .journal-chapters > li:not(:first-child) .journal-chapter {
+    grid-template-rows: auto 1fr;
+  }
+
+  .journal-chapters > li:not(:first-child) .journal-label {
+    align-self: start;
+  }
+
+  .journal-chapters > :first-child .journal-chapter {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  }
+
+  .journal-entry-header {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .journal-entry-header .journal-art {
+    width: 100%;
+    align-self: center;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .journal-chapter .journal-art img {
+    transition: transform 300ms cubic-bezier(0.2, 0.75, 0.25, 1);
+  }
+
+  .journal-chapter:is(:hover, :focus-visible) .journal-art img {
+    transform: scale(1.045);
+  }
 }

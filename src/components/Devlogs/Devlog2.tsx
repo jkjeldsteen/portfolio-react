@@ -12,7 +12,6 @@ const Devlog2: React.FC = () => {
       <div className="devlog-content">
         {/* Devlog #1 */}
         <div className="devlog-entry">
-          <h2 className="devlog-subtitle">Devlog #2 - Epoch Raiders</h2>
           <p className="devlog-text">
             November 10th 2024: Welcome back to another devlog for Epoch
             Raiders! Since the last update, some plans have shifted to focus on
